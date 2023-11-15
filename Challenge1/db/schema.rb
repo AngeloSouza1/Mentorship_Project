@@ -29,8 +29,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_25_163946) do
     t.integer "part_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.integer "livraria_book_id"
     t.integer "book_id"
     t.index ["assembly_id"], name: "index_assemblies_parts_on_assembly_id"
     t.index ["part_id"], name: "index_assemblies_parts_on_part_id"
@@ -60,13 +58,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_25_163946) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "livraria_books", force: :cascade do |t|
-    t.integer "author_id"
-    t.datetime "publishing", precision: nil
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "parts", force: :cascade do |t|
     t.string "part_number"
     t.datetime "created_at", null: false
@@ -80,7 +71,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_25_163946) do
   end
 
   add_foreign_key "assemblies_parts", "assemblies"
-  add_foreign_key "assemblies_parts", "livraria_books"
   add_foreign_key "assemblies_parts", "parts"
   add_foreign_key "assemblies_parts1", "assemblies"
   add_foreign_key "assemblies_parts1", "parts"
