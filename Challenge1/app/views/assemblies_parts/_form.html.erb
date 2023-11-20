@@ -25,7 +25,7 @@
     <%= form.label :book_id, "Livro:", class: "d-block" %>
     <%= form.collection_select :book_id, Book.all, :id, :title, { prompt: "Selecione um livro" }, class: "form-control form-control-sm text-center" %>
     <br>
-    </div>
+  </div>
 
   <div class="form-group col-md-4 mx-auto text-center">
     <%= form.submit "Salvar", class: "btn btn-primary btn-sm" %>

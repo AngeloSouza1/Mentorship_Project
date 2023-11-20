@@ -1,8 +1,6 @@
 <%= form_with(model: assembly) do |form| %>
   <% if assembly.errors.any? %>
     <div style="color: red">
-    
-
       <ul>
         <% assembly.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,9 +9,8 @@
     </div>
   <% end %>
 
- 
   <div>
-    <%= form.label :name,"Nome:", style: "display: block" %>
+    <%= form.label :name, "Nome:", style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 

@@ -1,32 +1,36 @@
 class PartsController < ApplicationController
-  before_action :set_part, only: %i[ show edit update destroy ]
+  before_action :set_part, only: %i[show edit update destroy]
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
 
-  # GET /parts or /parts.json
   def index
     @parts = Part.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @parts }
+    end
   end
 
-  # GET /parts/1 or /parts/1.json
   def show
- 
+    respond_to do |format|
+      format.html 
+      format.json { render json: @parts }
+    end
   end
 
-  # GET /parts/new
   def new
     @part = Part.new
   end
 
-  # GET /parts/1/edit
   def edit
   end
 
-  # POST /parts or /parts.json
   def create
     @part = Part.new(part_params)
 
     respond_to do |format|
       if @part.save
-        format.html { redirect_to part_url(@part), notice: "Part was successfully created." }
+        format.html { redirect_to part_url(@part), notice: "Parte criada com sucesso." }
         format.json { render :show, status: :created, location: @part }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,11 +39,10 @@ class PartsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /parts/1 or /parts/1.json
   def update
     respond_to do |format|
       if @part.update(part_params)
-        format.html { redirect_to part_url(@part), notice: "Part was successfully updated." }
+        format.html { redirect_to part_url(@part), notice: "Parte atualizada com sucesso." }
         format.json { render :show, status: :ok, location: @part }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -48,26 +51,22 @@ class PartsController < ApplicationController
     end
   end
 
-  # DELETE /parts/1 or /parts/1.json
   def destroy
     @part.destroy!
 
     respond_to do |format|
-      format.html { redirect_to parts_url, notice: "Part was successfully destroyed." }
+      format.html { redirect_to parts_url, notice: "Parte excluída com sucesso." }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_part
-      @part = Part.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def part_params
-    
-      params.require(:part).permit(:part_number)
+  def set_part
+    @part = Part.find(params[:id])
+  end
 
-    end
+  def part_params
+    params.require(:part).permit(:part_number)
+  end
 end

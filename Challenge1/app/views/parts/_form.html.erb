@@ -1,8 +1,6 @@
 <%= form_with(model: part) do |form| %>
   <% if part.errors.any? %>
     <div style="color: red">
-    
-
       <ul>
         <% part.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,11 +9,10 @@
     </div>
   <% end %>
 
-   <div>
-  <%= form.label :part_number,"Número da Peça", style: "display: block" %>
-  <%= form.text_field :part_number %>
-</div>
-
+  <div>
+    <%= form.label :part_number, "Número da Peça", style: "display: block" %>
+    <%= form.text_field :part_number %>
+  </div>
 
   <div class="mt-3">
     <%= form.submit "Salvar", class: "btn btn-success btn-sm", style: "width: 60px;" %>
