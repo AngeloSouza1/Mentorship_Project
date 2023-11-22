@@ -1,0 +1,14 @@
+<div class="text-center mt-3">
+  <p class="alert "><%= notice %></p>
+  <h1>Fornecedores</h1>
+  <%= link_to "Novo Fornecedor", new_supplier_path, class: "btn btn-success mt-3" %>
+  <div id="suppliers" class="mx-auto">
+    <% @suppliers.each do |supplier| %>
+      <br>
+      <%= render supplier %>
+      <p>
+        <%= link_to "Mostrar este fornecedor", supplier, class: "btn btn-info btn-sm" %>
+      </p>
+    <% end %>
+  </div>
+</div>

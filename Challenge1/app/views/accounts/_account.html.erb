@@ -1,0 +1,17 @@
+<div id="<%= dom_id account %>">
+  <p>
+    <strong>ID:</strong>
+    <%= account.supplier_id %>
+  </p>
+
+  <p>
+    <strong>Número da Contar:</strong>
+    <%= account.account_number %>
+  </p>
+
+
+  <p>
+    <strong>Nome do Fornecedor:</strong>
+    <%= account.supplier.present? ? account.supplier.name : "Nenhum fornecedor selecionado" %>
+  </p>
+  </div>

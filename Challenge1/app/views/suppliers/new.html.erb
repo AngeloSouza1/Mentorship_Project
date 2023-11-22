@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center align-items-center vh-10">
+  <div class="text-center">
+    <h1>Novo Fornecedor</h1>
+
+    <%= render "form", supplier: @supplier %>
+
+    <div class="mt-3">
+      <%= link_to "Voltar para Fornecedores",  suppliers_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
