@@ -7,19 +7,19 @@ assignees: ''
 
 ---
 
-## Problem Description
-Provide a clear and concise description of the problem you are facing.
+## Descrição do Problema
+Descreva de forma clara e concisa o problema que você está enfrentando.
 
-## Steps to Reproduce
-1. Step 1
-2. Step 2
+## Passos para Reproduzir
+1. Passo 1
+2. Passo 2
 3. ...
 
-## Current Behavior
-Describe what is currently happening.
+## Comportamento Atual
+Descreva o que está acontecendo atualmente.
 
-## Expected Behavior
-Describe what you expect to happen.
+## Comportamento Esperado
+Descreva o que você espera que aconteça.
 
-## Additional Information
-Include any additional information that might be helpful in resolving the issue (logs, screenshots, etc.).
+## Informações Adicionais
+Adicione qualquer informação adicional que possa ser útil para resolver o problema (logs, screenshots, etc.).
