@@ -1,0 +1,14 @@
+<div class="text-center mt-3">
+  <p class="alert "><%= notice %></p>
+  <h1>Autores</h1>
+  <%= link_to "Novo Autor", new_author_path, class: "btn btn-success mt-3" %>
+  <div id="authors" class="mx-auto">
+    <% @authors.each do |author| %>
+      <br>
+      <%= render author %>
+      <p>
+        <%= link_to "Mostrar este autor", author, class: "btn btn-info btn-sm" %>
+      </p>
+    <% end %>
+  </div>
+</div>

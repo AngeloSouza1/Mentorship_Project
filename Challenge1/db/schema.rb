@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.1].define(version: 2023_11_20_204118) do
-=======
-ActiveRecord::Schema[7.1].define(version: 2023_11_21_153545) do
->>>>>>> fe8e6fa (chore: config BDs: Fornecimento and Create CRUD Suppliers and Accounts)
+ActiveRecord::Schema[7.1].define(version: 2023_11_23_200628) do
   create_table "accounts", force: :cascade do |t|
     t.integer "supplier_id"
     t.string "account_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.integer "author_id"
+    t.datetime "publishing"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

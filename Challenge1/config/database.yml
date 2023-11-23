@@ -1,8 +1,21 @@
+
 development:
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   database: fornecimento.sqlite3
+
+livraria_development:
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: livraria_development.sqlite3
+
+montadora_development:
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: montadora_development.sqlite3
 
 test:
   adapter: sqlite3
@@ -10,8 +23,32 @@ test:
   timeout: 5000
   database: fornecimento_test.sqlite3
 
+livraria_test:
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: livraria_test.sqlite3
+
+montadora_test:
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: montadora_test.sqlite3
+
 production:
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   database: fornecimento_production.sqlite3
+
+livraria_production:
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: livraria_production.sqlite3
+
+montadora_production:
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: montadora_production.sqlite3
