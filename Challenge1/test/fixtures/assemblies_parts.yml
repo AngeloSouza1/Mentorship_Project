@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assembly: one
+  part: one
+  RAILS_ENV=montadora_development: MyString
+
+two:
+  assembly: two
+  part: two
+  RAILS_ENV=montadora_development: MyString
