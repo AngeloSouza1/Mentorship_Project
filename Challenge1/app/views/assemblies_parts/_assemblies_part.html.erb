@@ -1,0 +1,23 @@
+<div id="<%= dom_id assemblies_part %>" class="text-center">
+  <p>
+    <strong>Montagem:</strong>
+    <%= assemblies_part.assembly_id %>
+  </p>
+
+  <p>
+    <strong>Peça:</strong>
+    <%= assemblies_part.part_id %>
+  </p>
+
+  <p>
+    <strong>Livro:</strong>
+    <%= assemblies_part.book.title if assemblies_part.book %>
+  </p>
+
+  <p>
+    <strong>Número Peça:</strong>
+    <%= assemblies_part.part.part_number if assemblies_part.part %>
+
+    </p>
+</div>
+<br>

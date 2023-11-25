@@ -1,0 +1,12 @@
+
+
+<div class="text-center">
+  <h1 class="mb-4">Editando Peça de Montagem</h1>
+
+  <%= render "form", assemblies_part: @assemblies_part %>
+
+  <div class="mt-3">
+    <%= link_to "Mostrar esta Peça de Montagem", @assemblies_part, class: "btn btn-info" %> 
+    <%= link_to "Voltar para Peças de Montagens", assemblies_parts_path, class: "btn btn-secondary" %>
+  </div>
+</div>

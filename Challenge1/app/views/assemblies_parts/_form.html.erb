@@ -1,0 +1,33 @@
+<%= form_with(model: assemblies_part) do |form| %>
+  <% if assemblies_part.errors.any? %>
+    <div class="alert alert-danger">
+      <h2><%= pluralize(assemblies_part.errors.count, "error") %> impediram que esta peça de montagem fosse salva:</h2>
+
+      <ul>
+        <% assemblies_part.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group col-md-4 mx-auto text-center">
+    <%= form.label :assembly_id, "ID da Montagem:", class: "d-block" %>
+    <%= form.text_field :assembly_id, class: "form-control form-control-sm text-center" %>
+  </div>
+
+  <div class="form-group col-md-4 mx-auto text-center">
+    <%= form.label :part_id, "ID da Peça:", class: "d-block" %>
+    <%= form.text_field :part_id, class: "form-control form-control-sm text-center" %>
+  </div>
+
+  <div class="form-group col-md-4 mx-auto text-center">
+    <%= form.label :book_id, "Livro:", class: "d-block" %>
+    <%= form.collection_select :book_id, Book.all, :id, :title, { prompt: "Selecione um livro" }, class: "form-control form-control-sm text-center" %>
+    <br>
+    </div>
+
+  <div class="form-group col-md-4 mx-auto text-center">
+    <%= form.submit "Salvar", class: "btn btn-primary btn-sm" %>
+  </div>
+<% end %>
