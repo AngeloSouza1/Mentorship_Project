@@ -1,0 +1,14 @@
+<div class="text-center mt-3">
+  <p class="alert "><%= notice %></p>
+  <h1>Contas</h1>
+  <%= link_to "Nova Conta", new_account_path, class: "btn btn-success mt-3" %>
+  <div id="accounts" class="mx-auto">
+    <% @accounts.each do |account| %>
+      <br>
+      <%= render account %>
+      <p>
+        <%= link_to "Mostrar esta conta", account, class: "btn btn-info btn-sm" %>
+      </p>
+    <% end %>
+  </div>
+</div>

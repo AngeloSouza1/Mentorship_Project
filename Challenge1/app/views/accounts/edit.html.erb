@@ -1,0 +1,9 @@
+<div class="d-flex flex-column justify-content-center align-items-center vh-10 mt-50">
+<h1>Editando Conta</h1>
+  <%= render "form", account: @account %>
+  
+  <div class="d-flex mt-3">
+    <%= link_to "Mostrar essa conta", @account, class: "btn btn-info btn-sm mx-2" %> 
+    <%= link_to "Voltar para contas", accounts_path, class: "btn btn-secondary btn-sm mx-2" %>
+  </div>
+</div>

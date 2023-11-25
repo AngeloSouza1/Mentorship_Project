@@ -1,0 +1,33 @@
+<%= form_with(model: book) do |form| %>
+  <% if book.errors.any? %>
+    <div style="color: red">
+    
+
+      <ul>
+        <% book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    
+  <div>
+  <%= form.label :title,"Título:", style: "display: block" %>
+  <%= form.text_field :title %>
+</div>
+
+<div>
+  <%= form.label :author_id,"ID:", style: "display: block" %>
+  <%= form.number_field :author_id %>
+</div>
+
+<div>
+  <%= form.label :publishing,"Publicado", style: "display: block" %>
+  <%= form.datetime_field :publishing %>
+</div>
+
+  <div class="mt-3">
+    <%= form.submit "Salvar", class: "btn btn-success btn-sm", style: "width: 60px;" %>
+  </div>
+<% end %>

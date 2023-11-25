@@ -1,0 +1,14 @@
+<div class="text-center mt-3">
+  <p class="alert "><%= notice %></p>
+  <h1>Livros</h1>
+  <%= link_to "Novo Livro",new_book_path, class: "btn btn-success mt-3" %>
+  <div id="books" class="mx-auto">
+    <% @books.each do |book| %>
+      <br>
+      <%= render book %>
+      <p>
+        <%= link_to "Mostrar este livro", book, class: "btn btn-info btn-sm" %>
+      </p>
+    <% end %>
+  </div>
+</div>
