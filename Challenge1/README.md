@@ -79,8 +79,8 @@ O relacionamento entre as tabelas assemblies e parts através da tabela associat
 </p>
 
 #### 1.2 - Implementação dos C.R.U.D.S <br>
-- Crud para Cadastrar Autores
-- Crud para Cadastrar Livros vinculando com Autor
-- Crud para Cadastrar Fornecedores com uma Conta
-- Crud para Cadastrar Peças vinculando com Fornecedor
-- Crud para Cadastrar Montagens com várias Peças e vinculando com Livro
+- Crud para Cadastrar Autores -[ Assista ao vídeo de demonstração](https://vimeo.com/888319890/2e6803702c)
+- Crud para Cadastrar Livros vinculando com Autor-[ Assista ao vídeo de demonstração](https://vimeo.com/888323765/a4f32ee0c9) 
+- Crud para Cadastrar Fornecedores com uma Conta-[ Assista ao vídeo de demonstração](https://vimeo.com/888319472/72ea688605)
+- Crud para Cadastrar Peças vinculando com Fornecedor-[ Assista ao vídeo de demonstração](https://vimeo.com/888319213/3d1aa00baf)
+- Crud para Cadastrar Montagens com várias Peças e vinculando com Livro-[ Assista ao vídeo de demonstração](https://vimeo.com/888324184/a00d4713ff)
