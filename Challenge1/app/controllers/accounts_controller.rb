@@ -1,13 +1,22 @@
 class AccountsController < ApplicationController
-  before_action :set_account, only: %i[ show edit update destroy ]
-
+  before_action :set_account, only: %i[show edit update destroy]
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   # GET /accounts or /accounts.json
   def index
     @accounts = Account.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @accounts }
+    end
   end
 
   # GET /accounts/1 or /accounts/1.json
   def show
+    respond_to do |format|
+      format.html 
+      format.json { render json: @account }
+    end
   end
 
   # GET /accounts/new
@@ -58,13 +67,12 @@ class AccountsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_account
-      @account = Account.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def account_params
-      params.require(:account).permit(:supplier_id, :account_number)
-    end
+  def set_account
+    @account = Account.find(params[:id])
+  end
+
+  def account_params
+    params.require(:account).permit(:supplier_id, :account_number)
+  end
 end
