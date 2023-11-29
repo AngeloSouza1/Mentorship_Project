@@ -1,13 +1,22 @@
 class SuppliersController < ApplicationController
-  before_action :set_supplier, only: %i[ show edit update destroy ]
-
+  before_action :set_supplier, only: %i[show edit update destroy]
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   # GET /suppliers or /suppliers.json
   def index
     @suppliers = Supplier.all
+
+    respond_to do |format|
+      format.html # Renderiza views HTML normalmente
+      format.json { render json: @suppliers }
+    end
   end
 
   # GET /suppliers/1 or /suppliers/1.json
   def show
+    respond_to do |format|
+      format.html # Renderiza views HTML normalmente
+      format.json { render json: @supplier }
+    end
   end
 
   # GET /suppliers/new
@@ -58,13 +67,12 @@ class SuppliersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_supplier
-      @supplier = Supplier.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def supplier_params
-      params.require(:supplier).permit(:name)
-    end
+  def set_supplier
+    @supplier = Supplier.find(params[:id])
+  end
+
+  def supplier_params
+    params.require(:supplier).permit(:name)
+  end
 end
