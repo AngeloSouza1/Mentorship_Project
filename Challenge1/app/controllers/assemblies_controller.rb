@@ -11,10 +11,6 @@ class AssembliesController < ApplicationController
 
   end
 
-
-  
-
-
   # GET /assemblies/new
   def new
     @assembly = Assembly.new
