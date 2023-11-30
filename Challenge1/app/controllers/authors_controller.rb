@@ -1,13 +1,20 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: %i[ show edit update destroy ]
   skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
-  # GET /authors or /authors.json
-  def index
+
+   def index
     @authors = Author.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @authors }
+    end
   end
 
-  # GET /authors/1 or /authors/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @authors }
+    end
   end
 
   # GET /authors/new

@@ -1,15 +1,22 @@
 class AssembliesPartsController < ApplicationController
   before_action :set_assemblies_part, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
 
-  # GET /assemblies_parts or /assemblies_parts.json
   def index
     @assemblies_parts = AssembliesPart.all
+    respond_to do |format|
+      format.html
+      format.json { render json:  @assemblies_parts }
+    end
   end
 
-  # GET /assemblies_parts/1 or /assemblies_parts/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json:  @assemblies_parts }
+    end
   end
-
+  
 
   # GET /assemblies_parts/new
   def new
