@@ -1,18 +1,14 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Assemblies</h1>
-
-<div id="assemblies">
-  <% @assemblies.each do |assembly| %>
-    <%= render assembly %>
-    <p>
-      <%= link_to "Show this assembly", assembly %>
-    </p>
-  
- 
- 
- 
+<div class="text-center mt-3">
+  <p class="alert "><%= notice %></p>
+  <h1>Montagens</h1>
+  <%= link_to "Nova montagem", new_assembly_path, class: "btn btn-success mt-3" %>
+  <div id="assemblies" class="mx-auto">
+    <% @assemblies.each do |assembly| %>
+      <br>
+      <%= render assembly %>
+      <p>
+        <%= link_to "Mostrar esta montagem", assembly, class: "btn btn-info btn-sm" %>
+      </p>
     <% end %>
+  </div>
 </div>
-
-<%= link_to "New assembly", new_assembly_path %>
