@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Parts</h1>
-
-<div id="parts">
-  <% @parts.each do |part| %>
-    <%= render part %>
-    <p>
-      <%= link_to "Show this part", part %>
-    </p>
-  <% end %>
+<div class="text-center mt-3">
+  <p class="alert "><%= notice %></p>
+  <h1>Peças</h1>
+  <%= link_to "Nova Peça", new_part_path, class: "btn btn-success mt-3" %>
+  <div id="parts" class="mx-auto">
+    <% @parts.each do |part| %>
+      <br>
+      <%= render part %>
+      <p>
+        <%= link_to "Mostrar esta peça", part, class: "btn btn-info btn-sm" %>
+      </p>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New part", new_part_path %>
