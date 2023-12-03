@@ -98,10 +98,10 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 
 ### 3. Batalha  - *REGRAS*   
 #### 3.1 - Inserções dos campos solicitados<br>
-- Adicionar campo CNPJ na tabela Suppliers
-- Adicionar campo Digito_Verificador na tabela Account
-- Adicionar campo ISBN na tabela Books
-- Adicionar campo CPF na tabela Authors
-- Adicionar cálculo Digito_Verificador em Account
-- Validar os campos : CNPJ na tabela Suppliers, ISBN na tabela Books e CPF na tabela Authors
+- Campo CNPJ na tabela Suppliers
+- Campo Digito_Verificador na tabela Account
+- Campo ISBN na tabela Books
+- Campo CPF na tabela Authors
+- Cálculo Digito_Verificador em Account
+- Validação dos campos : CNPJ na tabela Suppliers, ISBN na tabela Books e CPF na tabela Authors
 
