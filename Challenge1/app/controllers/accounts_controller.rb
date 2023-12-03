@@ -27,21 +27,26 @@ class AccountsController < ApplicationController
 
   def create
     @account = Account.new(account_params)
-
+    @account.digito_verificador = @account.calcular_digito_verificador
+  
     respond_to do |format|
       if @account.save
         format.html { redirect_to account_url(@account), notice: "Conta criada com sucesso." }
         format.json { render :show, status: :created, location: @account }
       else
+         flash[:error] = @account.errors.full_messages.join(", ")
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @account.errors, status: :unprocessable_entity }
       end
     end
   end
-
+  
   def update
     respond_to do |format|
       if @account.update(account_params)
+         @account.calcular_digito_verificador
+         @account.save
+  
         format.html { redirect_to account_url(@account), notice: "Conta atualizada com sucesso." }
         format.json { render :show, status: :ok, location: @account }
       else
@@ -67,6 +72,6 @@ class AccountsController < ApplicationController
   end
 
   def account_params
-    params.require(:account).permit(:supplier_id, :account_number)
+    params.require(:account).permit(:supplier_id, :account_number, :digito_verificador)
   end
 end
