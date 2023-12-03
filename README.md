@@ -105,3 +105,24 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 - Cálculo Digito_Verificador em Account
 - Validação dos campos : CNPJ na tabela Suppliers, ISBN na tabela Books e CPF na tabela Authors
 
+### 4. Batalha  - *FILTROS*
+#### 4.1 - Inserções de campos solicitados<br>
+- Campo Título na tabela Books
+- Campo Nome na tabela Parts
+#### 4.2 - Inserções de filtros solicitados<br>
+- Fornecedor por nome
+- Fornecedor por número de conta em conta
+- Livros por título
+- Livros por nome em Autor 
+- Montatem por nome em Peça
+- Fornecedor por nome do Autor 
+
+
+
+
+
+
+
+
+
+
