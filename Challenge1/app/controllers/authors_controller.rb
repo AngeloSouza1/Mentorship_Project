@@ -6,14 +6,14 @@ class AuthorsController < ApplicationController
     @authors = Author.all
     respond_to do |format|
       format.html
-      format.json { render json: authors }
+      format.json { render json: @authors }
     end
   end
 
   def show
     respond_to do |format|
       format.html
-      format.json { render json: authors }
+      format.json { render json: @authors }
     end
   end
 
@@ -39,13 +39,13 @@ class AuthorsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if author.update(author_params)
-        format.html { redirect_to author_url(author), notice: "Autor atualizado com sucesso." }
-        format.json { render :show, status: :ok, location: author }
+     respond_to do |format|
+      if @author.update(author_params)
+        format.html { redirect_to author_url(@author), notice: "Autor atualizado com sucesso." }
+        format.json { render :show, status: :ok, location: @author }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: author.errors, status: :unprocessable_entity }
+        format.json { render json: @author.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -66,6 +66,6 @@ class AuthorsController < ApplicationController
   end
 
   def author_params
-    params.require(:author).permit(:name)
+    params.require(:author).permit(:name,:cpf)
   end
 end
