@@ -84,3 +84,23 @@ O relacionamento entre as tabelas assemblies e parts através da tabela associat
 - Crud para Cadastrar Fornecedores com uma Conta-[ Assista ao vídeo de demonstração](https://vimeo.com/888319472/72ea688605)
 - Crud para Cadastrar Peças vinculando com Fornecedor-[ Assista ao vídeo de demonstração](https://vimeo.com/888319213/3d1aa00baf)
 - Crud para Cadastrar Montagens com várias Peças e vinculando com Livro-[ Assista ao vídeo de demonstração](https://vimeo.com/888324184/a00d4713ff)
+
+### 2. Batalha  - *APIS*   
+#### 2.1 - Implementação dos C.R.U.D.S <br>
+- Crud para Cadastrar Autores 
+- Crud para Cadastrar Livros vinculando com Autor
+- Crud para Cadastrar Fornecedores com uma Conta
+- Crud para Cadastrar Peças vinculando com Fornecedor
+- Crud para Cadastrar Montagens com várias Peças e vinculando com Livro
+#### O mesmo procedimento, porém, utilizando arquivos JSON para os CRUDS.   
+https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-beed-4eb5-9ca6-50d5115c3603
+
+#### 2.1 - Inserções dos campos solicitados na batalha <br>
+
+- Adicionar campo CNPJ na tabela Suppliers
+- Adicionar campo Digito_Verificador na tabela Account
+- Adicionar campo ISBN na tabela Books
+- Adicionar campo CPF na tabela Authors
+- Adicionar cálculo Digito_Verificador em Account
+- Validar os campos : CNPJ na tabela Suppliers, ISBN na tabela Books e CPF na tablea Authors
+
