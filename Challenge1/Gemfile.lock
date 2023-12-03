@@ -126,6 +126,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
+    maskedinput-rails (1.4.1.0)
     matrix (0.4.2)
     mini_mime (1.1.5)
     minitest (5.20.0)
@@ -241,6 +242,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  maskedinput-rails
   puma (>= 5.0)
   rails (~> 7.1.2)
   selenium-webdriver
