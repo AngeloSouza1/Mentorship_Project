@@ -95,7 +95,12 @@ O relacionamento entre as tabelas assemblies e parts através da tabela associat
 #### O mesmo procedimento, porém, utilizando arquivos JSON para os CRUDS.   
 https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-beed-4eb5-9ca6-50d5115c3603
 
+#### 2.1 - Inserções dos campos solicitados na batalha <br>
 
-
-
+- Adicionar campo CNPJ na tabela Suppliers
+- Adicionar campo Digito_Verificador na tabela Account
+- Adicionar campo ISBN na tabela Books
+- Adicionar campo CPF na tabela Authors
+- Adicionar cálculo Digito_Verificador em Account
+- Validar os campos : CNPJ na tabela Suppliers, ISBN na tabela Books e CPF na tablea Authors
 
