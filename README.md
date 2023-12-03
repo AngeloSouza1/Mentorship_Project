@@ -111,7 +111,7 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 - Campo Nome na tabela Parts
 #### 4.2 - Inserções de filtros solicitados<br>
 - Fornecedor por nome
-- Fornecedor por número de conta em conta
+- Fornecedor por número de conta em Conta
 - Livros por título
 - Livros por nome em Autor 
 - Montatem por nome em Peça
