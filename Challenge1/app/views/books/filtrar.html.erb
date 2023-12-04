@@ -21,13 +21,23 @@
       <table class="table table-sm mt-4">
         <thead>
           <tr>
+            <th scope="col">ID</th>
             <th scope="col">Título</th>
+            <th scope="col">ID Author</th>
+            <th scope="col">Author</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Publicado</th>
           </tr>
         </thead>
         <tbody>
           <% @books.each_with_index do |book, index| %>
             <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
+              <td><%= book.id %></td>
               <td><%= book.title %></td>
+              <td><%= book.author_id %></td> 
+              <td><%= book.author.name %></td> 
+              <td><%= book.isbn %></td> 
+              <td><%= book.publishing %></td> 
             </tr>
           <% end %>
         </tbody>
