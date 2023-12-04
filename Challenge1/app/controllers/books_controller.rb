@@ -17,6 +17,16 @@ class BooksController < ApplicationController
     end
   end
 
+  def filtrar
+    if params[:search_book].present?
+      @books = Book.where("title LIKE ?", "%#{params[:search_book]}%")
+    else
+      @books = Book.all
+    end
+    puts "DEBUG: Parâmetros de filtro - #{params.inspect}"
+    render :filtrar  
+  end
+
   def new
     @book = Book.new
   end

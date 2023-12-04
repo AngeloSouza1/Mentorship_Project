@@ -21,15 +21,13 @@
       <table class="table table-sm mt-4">
         <thead>
           <tr>
-            <th scope="col">Name</th>
-            <!-- Adicione mais colunas conforme necessário -->
-          </tr>
+            <th scope="col">Nome</th>
+              </tr>
         </thead>
         <tbody>
           <% @suppliers.each_with_index do |supplier, index| %>
             <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
               <td><%= supplier.name %></td>
-              <!-- Adicione mais colunas conforme necessário -->
             </tr>
           <% end %>
         </tbody>
