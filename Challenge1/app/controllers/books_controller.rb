@@ -23,7 +23,6 @@ class BooksController < ApplicationController
     else
       @books = Book.all
     end
-    puts "DEBUG: Parâmetros de filtro - #{params.inspect}"
     render :filtrar  
   end
 

@@ -17,6 +17,16 @@ class AuthorsController < ApplicationController
     end
   end
 
+  def filtrar
+    if params[:search_author].present?
+      @books = Book.joins(:author).where("authors.name LIKE ?", "%#{params[:search_author]}%")
+    else
+      @books = Book.all
+    end
+    render :filtrar
+  end
+  
+
   def new
     @author = Author.new
   end
