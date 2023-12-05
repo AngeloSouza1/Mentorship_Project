@@ -31,7 +31,7 @@ class SuppliersController < ApplicationController
     render :filtrar  
   end
 
- 
+
   def edit
   end
 

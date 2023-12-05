@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   get '/filtrar_contas', to: 'accounts#filtrar', as: 'filtrar_contas'
   get '/filtrar_livros', to: 'books#filtrar', as: 'filtrar_livros'
   get '/filtrar_autor', to: 'authors#filtrar', as: 'filtrar_autor'
+  get '/filtrar_peca', to: 'parts#filtrar', as: 'filtrar_peca'
+  get '/filtrar_fornec', to: 'supliers#filtrar', as: 'filtrar_fornec'
+
+
+
 
   get "up" => "rails/health#show", as: :rails_health_check
  
