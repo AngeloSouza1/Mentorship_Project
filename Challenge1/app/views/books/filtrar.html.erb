@@ -23,10 +23,10 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Título</th>
-            <th scope="col">ID Author</th>
-            <th scope="col">Author</th>
             <th scope="col">ISBN</th>
             <th scope="col">Publicado</th>
+            <th scope="col">ID Author</th>
+            <th scope="col">Author</th>
           </tr>
         </thead>
         <tbody>
@@ -34,11 +34,11 @@
             <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
               <td><%= book.id %></td>
               <td><%= book.title %></td>
-              <td><%= book.author_id %></td> 
-              <td><%= book.author.name %></td> 
               <td><%= book.isbn %></td> 
               <td><%= book.publishing %></td> 
-            </tr>
+              <td><%= book.author_id %></td> 
+              <td><%= book.author.name %></td> 
+                 </tr>
           <% end %>
         </tbody>
       </table>

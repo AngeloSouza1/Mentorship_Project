@@ -23,8 +23,7 @@ class AuthorsController < ApplicationController
     else
       @books = Book.all
     end
-    Rails.logger.info "DEBUG: Books - #{@books.inspect}" # Adicione esta linha
-    render :filtrar
+    
   end
   
 

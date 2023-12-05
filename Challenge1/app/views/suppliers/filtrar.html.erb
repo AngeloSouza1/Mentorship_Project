@@ -21,13 +21,17 @@
       <table class="table table-sm mt-4">
         <thead>
           <tr>
+            <th scope="col">ID</th>  
             <th scope="col">Nome</th>
-              </tr>
+            <th scope="col">CNPJ</th>
+          </tr>
         </thead>
         <tbody>
           <% @suppliers.each_with_index do |supplier, index| %>
             <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
+              <td><%= supplier.id %></td> 
               <td><%= supplier.name %></td>
+              <td><%= supplier.cnpj %></td> 
             </tr>
           <% end %>
         </tbody>

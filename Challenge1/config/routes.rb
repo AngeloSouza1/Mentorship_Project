@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/filtrar_livros', to: 'books#filtrar', as: 'filtrar_livros'
   get '/filtrar_autor', to: 'authors#filtrar', as: 'filtrar_autor'
   get '/filtrar_peca', to: 'parts#filtrar', as: 'filtrar_peca'
-  get '/filtrar_fornec', to: 'supliers#filtrar', as: 'filtrar_fornec'
+  get '/filtrar_montagem', to: 'assemblies_parts#filtrar', as: 'filtrar_montagem'
 
 
 
