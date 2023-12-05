@@ -1,5 +1,5 @@
 <div class="container mt-4">
-  <h1 class="text-center">Filtrar Livros por nome do Autor</h1>
+  <h1 class="text-center">Filtrar Livros por Nome</h1>
   <%= form_tag(filtrar_autor_path, method: "get", class: "text-center") do %>
     <div class="form-group row justify-content-center">
       <%= label_tag :search_author, "Nome do Autor:", class: "col-md-2 col-form-label" %>
@@ -23,25 +23,26 @@
       <table class="table table-sm table-striped mt-4">
         <thead>
           <tr>
+            <th scope="col">ID</th>
             <th scope="col">Título do Livro</th>
-            <th scope="col">ISBN</th>   
-            <th scope="col">Publicação</th> 
+            <th scope="col">Publicado</th>
+            <th scope="col">ID Autor</th>
             <th scope="col">Nome do Autor</th>
-            </tr>
+          </tr>
         </thead>
         <tbody>
           <% @books.each do |book| %>
             <tr>
+              <td><%= book.id %></td>
               <td><%= book.title %></td>
-              <td><%= book.isbn %></td>
               <td><%= book.publishing %></td>
+              <td><%= book.author_id %></td>
               <td><%= book.author.name %></td>
               </tr>
           <% end %>
         </tbody>
       </table>
     <% else %>
-    <p>
       <p class="text-center">Nenhum livro encontrado para o autor especificado.</p>
     <% end %>
   <% end %>

@@ -27,7 +27,6 @@ class SuppliersController < ApplicationController
     else
       @suppliers = Supplier.all
     end
-    puts "DEBUG: Parâmetros de filtro - #{params.inspect}"
     render :filtrar  
   end
 

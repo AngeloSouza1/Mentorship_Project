@@ -16,13 +16,14 @@ class AuthorsController < ApplicationController
       format.json { render json: @authors }
     end
   end
-
+ 
   def filtrar
     if params[:search_author].present?
       @books = Book.joins(:author).where("authors.name LIKE ?", "%#{params[:search_author]}%")
     else
       @books = Book.all
     end
+    Rails.logger.info "DEBUG: Books - #{@books.inspect}" # Adicione esta linha
     render :filtrar
   end
   
