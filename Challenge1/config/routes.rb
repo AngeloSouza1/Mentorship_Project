@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- 
+  resources :author_temps
   resources :parts
   resources :assemblies_parts
   resources :authors
@@ -7,15 +7,14 @@ Rails.application.routes.draw do
   resources :accounts
   resources :suppliers
   resources :assemblies
-
   get '/filtrar_fornecedores', to: 'suppliers#filtrar', as: 'filtrar_fornecedores'
   get '/filtrar_contas', to: 'accounts#filtrar', as: 'filtrar_contas'
   get '/filtrar_livros', to: 'books#filtrar', as: 'filtrar_livros'
   get '/filtrar_autor', to: 'authors#filtrar', as: 'filtrar_autor'
   get '/filtrar_peca', to: 'parts#filtrar', as: 'filtrar_peca'
   get '/filtrar_montagem', to: 'assemblies_parts#filtrar', as: 'filtrar_montagem'
-
-
+  get '/filtrar_fornec_autor', to: 'suppliers#filtrar2', as: 'filtrar_fornec_autor'
+ 
 
   get "up" => "rails/health#show", as: :rails_health_check
  
