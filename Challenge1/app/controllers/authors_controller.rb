@@ -23,7 +23,7 @@ class AuthorsController < ApplicationController
     else
       @books = Book.all
     end
-    
+
   end
   
 
@@ -36,7 +36,6 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.new(author_params)
-
     respond_to do |format|
       if author.save
         format.html { redirect_to author_url(author), notice: "Autor criado com sucesso." }

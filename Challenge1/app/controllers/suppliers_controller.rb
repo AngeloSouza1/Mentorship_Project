@@ -29,6 +29,17 @@ class SuppliersController < ApplicationController
     end
     render :filtrar  
   end
+  def filtrar2
+    if params[:search_name].present?
+       author_temps = AuthorTemp.where("name LIKE ?", "%#{params[:search_name]}%")
+       @suppliers = Supplier.where(id: author_temps.pluck(:sup_id))
+    else
+       @suppliers = Supplier.all
+    end
+  
+    render :filtrar2
+  end
+  
 
   def edit
   end
@@ -80,6 +91,6 @@ class SuppliersController < ApplicationController
   end
 
   def supplier_params
-    params.require(:supplier).permit(:name, :cnpj)
+    params.require(:supplier).permit(:name, :cnpj, sup_id)
   end
 end

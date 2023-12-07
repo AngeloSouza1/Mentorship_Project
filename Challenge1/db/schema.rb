@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_03_122110) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_06_175518) do
   create_table "accounts", force: :cascade do |t|
     t.integer "supplier_id"
     t.string "account_number"
@@ -45,6 +45,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_03_122110) do
     t.index ["part_id"], name: "index_assemblies_parts1_on_part_id"
   end
 
+  create_table "author_temps", force: :cascade do |t|
+    t.integer "sup_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "authors", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -73,10 +80,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_03_122110) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "cnpj"
+    t.integer "author_temp_id"
+    t.index ["author_temp_id"], name: "index_suppliers_on_author_temp_id"
   end
 
   add_foreign_key "assemblies_parts", "assemblies"
   add_foreign_key "assemblies_parts", "parts"
   add_foreign_key "assemblies_parts1", "assemblies"
   add_foreign_key "assemblies_parts1", "parts"
+  add_foreign_key "suppliers", "author_temps"
 end
