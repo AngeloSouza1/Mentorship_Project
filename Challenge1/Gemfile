@@ -4,6 +4,7 @@ ruby "3.0.2"
 
 gem 'maskedinput-rails'
 
+gem 'wicked_pdf'
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
