@@ -16,6 +16,16 @@ class AuthorsController < ApplicationController
       format.json { render json: @authors }
     end
   end
+ 
+  def filtrar
+    if params[:search_author].present?
+      @books = Book.joins(:author).where("authors.name LIKE ?", "%#{params[:search_author]}%")
+    else
+      @books = Book.all
+    end
+
+  end
+  
 
   def new
     @author = Author.new
@@ -26,7 +36,6 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.new(author_params)
-
     respond_to do |format|
       if author.save
         format.html { redirect_to author_url(author), notice: "Autor criado com sucesso." }

@@ -4,7 +4,6 @@ class SuppliersController < ApplicationController
 
   def index
     @suppliers = Supplier.all
-
     respond_to do |format|
       format.html
       format.json { render json: @suppliers }
@@ -21,6 +20,26 @@ class SuppliersController < ApplicationController
   def new
     @supplier = Supplier.new
   end
+
+  def filtrar
+    if params[:search_name].present?
+      @suppliers = Supplier.where("name LIKE ?", "%#{params[:search_name]}%")
+    else
+      @suppliers = Supplier.all
+    end
+    render :filtrar  
+  end
+  def filtrar2
+    if params[:search_name].present?
+       author_temps = AuthorTemp.where("name LIKE ?", "%#{params[:search_name]}%")
+       @suppliers = Supplier.where(id: author_temps.pluck(:sup_id))
+    else
+       @suppliers = Supplier.all
+    end
+  
+    render :filtrar2
+  end
+  
 
   def edit
   end
@@ -60,13 +79,18 @@ class SuppliersController < ApplicationController
     end
   end
 
+
+
+
   private
 
   def set_supplier
-    @supplier = Supplier.find(params[:id])
+    if params[:id].present?
+      @supplier = Supplier.find(params[:id])
+    end
   end
 
   def supplier_params
-    params.require(:supplier).permit(:name, :cnpj)
+    params.require(:supplier).permit(:name, :cnpj, sup_id)
   end
 end

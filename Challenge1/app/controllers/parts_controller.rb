@@ -18,6 +18,17 @@ class PartsController < ApplicationController
     end
   end
 
+  def filtrar
+    if params[:search_part].present?
+      part_ids = Part.where("nome LIKE ?", "%#{params[:search_part]}%").pluck(:id)
+      @assemblies_parts = AssembliesPart.where(part_id: part_ids)
+    else
+      @assemblies_parts = AssembliesPart.all
+    end
+    render :filtrar
+  end
+
+
   def new
     @part = Part.new
   end
@@ -67,6 +78,6 @@ class PartsController < ApplicationController
   end
 
   def part_params
-    params.require(:part).permit(:part_number)
+    params.require(:part).permit(:part_number, :nome) 
   end
 end

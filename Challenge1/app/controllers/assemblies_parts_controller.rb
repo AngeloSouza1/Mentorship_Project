@@ -10,6 +10,18 @@ class AssembliesPartsController < ApplicationController
     end
   end
 
+
+
+def filtrar
+  if params[:search_part].present?
+    part_ids = Part.where("nome LIKE ?", "%#{params[:search_part]}%").pluck(:id)
+    @assemblies_parts = AssembliesPart.where(part_id: part_ids)
+  else
+    @assemblies_parts = AssembliesPart.all
+  end
+  render :filtrar
+end
+
   def show
     respond_to do |format|
       format.html
