@@ -1,10 +1,9 @@
-<%= content_tag :p, notice, class: "text-success text-center" if notice.present? %>
-
 <div id="assemblies_parts" class="mt-3 d-flex flex-column align-items-center">
   <h1 class="text-center">Peças de Montagens</h1>
-  <br>
-  <%= link_to "Nova peça de montagem", new_assemblies_part_path, class: "btn btn-primary mt-3" %>
-
+  <div class="d-flex justify-content-between mb-3">
+    <%= link_to "Nova peça de montagem", new_assemblies_part_path, class: "btn btn-success" %>
+    <%= link_to "Filtrar Montagens", filtrar_montagem_path, class: "btn btn-primary" %>
+  </div>
   <% @assemblies_parts.each do |assemblies_part| %>
     <%= render "assemblies_part", assemblies_part: assemblies_part %>
     <p>

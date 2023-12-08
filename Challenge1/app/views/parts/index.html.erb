@@ -3,6 +3,7 @@
   <p class="alert "><%= notice %></p>
   <h1>Peças</h1>
   <%= link_to "Nova Peça", new_part_path, class: "btn btn-success mt-3" %>
+  <%= link_to "Filtrar Peças", filtrar_peca_path, class: "btn btn-primary mt-3" %>
   <div id="parts" class="mx-auto">
     <% @parts.each do |part| %>
       <br>

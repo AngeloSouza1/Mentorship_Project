@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @author_temp %>
+
+<div>
+  <%= link_to "Edit this author temp", edit_author_temp_path(@author_temp) %> |
+  <%= link_to "Back to author temps", author_temps_path %>
+
+  <%= button_to "Destroy this author temp", @author_temp, method: :delete %>
+</div>

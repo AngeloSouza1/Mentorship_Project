@@ -11,6 +11,18 @@ class AccountsController < ApplicationController
     end
   end
 
+  def filtrar
+    if params[:search_account].present?
+      @accounts = Account.where("account_number LIKE ?", "%#{params[:search_account]}%")
+    else
+      @accounts = Account.all
+    end
+    puts "DEBUG: Parâmetros de filtro - #{params.inspect}"
+    render :filtrar  
+  end
+
+
+
   def show
     respond_to do |format|
       format.html 

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Author temps</h1>
+
+<div id="author_temps">
+  <% @author_temps.each do |author_temp| %>
+    <%= render author_temp %>
+    <p>
+      <%= link_to "Show this author temp", author_temp %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New author temp", new_author_temp_path %>
