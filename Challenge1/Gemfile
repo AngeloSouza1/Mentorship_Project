@@ -6,6 +6,8 @@ gem 'maskedinput-rails'
 
 gem 'prawn'
 
+gem 'prawn-table'
+
 gem 'wkhtmltopdf-binary'
 
 gem 'rack', '~> 2.2'
