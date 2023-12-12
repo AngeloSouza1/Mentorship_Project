@@ -15,7 +15,11 @@ Rails.application.routes.draw do
   get '/filtrar_montagem', to: 'assemblies_parts#filtrar', as: 'filtrar_montagem'
   get '/filtrar_fornec_autor', to: 'suppliers#filtrar2', as: 'filtrar_fornec_autor'
  
+  get '/relatorio', to: 'authors#relatorio', as: 'relatorio_autor'
 
   get "up" => "rails/health#show", as: :rails_health_check
- 
+
+  resources :authors do
+    get 'gerar_pdf_aut', on: :member
+  end
 end

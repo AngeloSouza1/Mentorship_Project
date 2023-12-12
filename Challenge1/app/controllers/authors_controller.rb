@@ -26,6 +26,22 @@ class AuthorsController < ApplicationController
 
   end
   
+  def relatorio
+    if params[:search_author].present?
+      @authors = Author.where("name LIKE ?", "%#{params[:search_author]}%")
+    else
+      @authors = Book.all
+    end
+    render :relatorio
+  end
+
+
+  def gerar_pdf_aut
+    author_id = params[:author_id]
+    @author = Author.find_by(id: author_id)
+  
+    # Restante do código
+  end
 
   def new
     @author = Author.new
