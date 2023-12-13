@@ -1,0 +1,26 @@
+<div class="container mt-4">
+<button onclick="history.back()" style="float: right; margin-right: 5px;" class="btn btn-secondary btn-sm">Voltar</button>
+<button style="float: right; margin-right: 5px;" class="btn btn-success btn-sm">PDF</button>
+<br> 
+<p>
+<h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Dados do Autor</h5>
+
+  <div class="mt-4">
+    <% if @authors.present? %>
+      <p><strong>ID Autor:</strong> <%= @authors.id %></p>
+      <p><strong>Autor:</strong> <%= @authors.name %></p>
+      <p><strong>CPF:</strong> <%= @authors.cpf %></p>
+    <% else %>
+      <p class="text-danger">Autor não encontrado.</p>
+    <% end %>
+  </div>
+
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Livros do Autor</h5>
+
+
+
+
+
+
+  </div>
+

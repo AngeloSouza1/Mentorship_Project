@@ -16,10 +16,10 @@ Rails.application.routes.draw do
   get '/filtrar_fornec_autor', to: 'suppliers#filtrar2', as: 'filtrar_fornec_autor'
  
   get '/relatorio', to: 'authors#relatorio', as: 'relatorio_autor'
-
+  get '/relatorio/gerar', to: 'authors#gerar', as: 'gerar'
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :authors do
-    get 'gerar_pdf_aut', on: :member
+    get 'gerar', on: :member
   end
 end

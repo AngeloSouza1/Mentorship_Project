@@ -2,7 +2,7 @@
   <p class="alert "><%= notice %></p>
   <h1>Autores</h1>
   <%= link_to "Novo Autor", new_author_path, class: "btn btn-success mt-3" %>
-  <%= link_to "Filtrar Autores", filtrar_autor_path, class: "btn btn-primary mt-3" %>
+  <%= link_to "Filtro : Livros", filtrar_autor_path, class: "btn btn-primary mt-3" %>
   <%= link_to "Relatorio Autores",relatorio_autor_path, class: "btn btn-primary mt-3" %>
   <div id="authors" class="mx-auto">
     <% @authors.each do |author| %>

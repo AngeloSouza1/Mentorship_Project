@@ -2,10 +2,10 @@
   <h1 class="text-center">Relatorio Autor</h1>
   <%= form_tag( relatorio_autor_path, method: "get", class: "text-center") do %>
     <div class="form-group row justify-content-center">
-      <%= label_tag :search_author, "Título do Livro:", class: "col-md-2 col-form-label" %>
+      <%= label_tag :search_author, "Nome do Autor:", class: "col-md-2 col-form-label" %>
       <div class="col-md-6">
         <div class="input-group">
-          <%= text_field_tag :search_author, params[:search_author], class: "form-control form-control-sm", placeholder: "Digite o nome do Título" %>
+          <%= text_field_tag :search_author, params[:search_author], class: "form-control form-control-sm", placeholder: "Digite o nome do Autor" %>
           <div class="input-group-append">
             <%= submit_tag "Filtrar", class: "btn btn-primary btn-sm" %>
           </div>
@@ -19,12 +19,11 @@
   
   <% if params[:search_author].present? %>
     <% if @authors.present? %>
-      <table class="table table-sm mt-4">
+     <table class="table table-sm table-auto mt-4">
         <thead>
           <tr>
-            <th scope="col">ID Author</th>
-            <th scope="col">Author</th>
-            <th scope="col">Ações</th>
+            <th scope="col">ID Autor</th>
+            <th scope="col">Autor</th>
           </tr>
         </thead>
         <tbody>
@@ -32,9 +31,10 @@
             <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
               <td><%= author.id %></td>
               <td><%= author.name %></td> 
-              <td>
-              <%= link_to 'Gerar Relatório', gerar_pdf_autor_path(author, search_author: params[:search_author]), class: 'btn btn-primary btn-sm' %>
-            </td>
+              <td colspan="3" class="text-right">
+            <%= link_to 'Gerar Relatório', gerar_path(author_id: author.id), class: 'btn btn-primary btn-sm' %>
+             </td>
+                          
             </tr>
           <% end %>
         </tbody>
@@ -45,3 +45,8 @@
     <% end %>
   <% end %>
 </div>
+
+
+
+
+
