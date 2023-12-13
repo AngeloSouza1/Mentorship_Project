@@ -30,16 +30,16 @@ class AuthorsController < ApplicationController
     if params[:search_author].present?
       @authors = Author.where("name LIKE ?", "%#{params[:search_author]}%")
     else
-      @authors = Book.all
+      @authors = Author.all
     end
     render :relatorio
   end
 
 
-  def gerar_pdf_aut
+  def gerar
     author_id = params[:author_id]
-    @author = Author.find_by(id: author_id)
-  
+    @authors = Author.find_by(id: author_id)
+
     # Restante do código
   end
 
@@ -52,19 +52,20 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.new(author_params)
+
     respond_to do |format|
-      if author.save
-        format.html { redirect_to author_url(author), notice: "Autor criado com sucesso." }
-        format.json { render :show, status: :created, location: author }
+      if @author.save
+        format.html { redirect_to author_path(@author), notice: "Autor criado com sucesso." }
+        format.json { render :show, status: :created, location: @author }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: author.errors, status: :unprocessable_entity }
+        format.json { render json: @author.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def update
-     respond_to do |format|
+    respond_to do |format|
       if @author.update(author_params)
         format.html { redirect_to author_url(@author), notice: "Autor atualizado com sucesso." }
         format.json { render :show, status: :ok, location: @author }
@@ -76,13 +77,13 @@ class AuthorsController < ApplicationController
   end
 
   def destroy
-    author.destroy!
+    @author.destroy!
 
     respond_to do |format|
       format.html { redirect_to authors_url, notice: "Autor excluído com sucesso." }
-      format.json { head :no_content }
     end
   end
+
 
   private
 
