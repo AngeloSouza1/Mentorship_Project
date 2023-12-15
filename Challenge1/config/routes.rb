@@ -17,9 +17,11 @@ Rails.application.routes.draw do
  
   get '/relatorio', to: 'authors#relatorio', as: 'relatorio_autor'
   get '/relatorio/gerar', to: 'authors#gerar', as: 'gerar'
-  get "up" => "rails/health#show", as: :rails_health_check
+  get 'gerar_author_pdf', to: 'authors#gerar_author_pdf', as: 'gerar_author_pdf'
 
   resources :authors do
     get 'gerar', on: :member
   end
+  get "up" => "rails/health#show", as: :rails_health_check
+ 
 end

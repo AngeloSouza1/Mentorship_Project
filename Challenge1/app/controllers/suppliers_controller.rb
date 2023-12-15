@@ -31,8 +31,8 @@ class SuppliersController < ApplicationController
   end
   def filtrar2
     if params[:search_name].present?
-       author_temps = AuthorTemp.where("name LIKE ?", "%#{params[:search_name]}%")
-       @suppliers = Supplier.where(id: author_temps.pluck(:sup_id))
+       author = Author.where("name LIKE ?", "%#{params[:search_name]}%")
+       @suppliers = Supplier.where(id: author.pluck(:sup_id))
     else
        @suppliers = Supplier.all
     end
@@ -71,7 +71,7 @@ class SuppliersController < ApplicationController
   end
 
   def destroy
-    @supplier.destroy!
+    @suppliers.destroy!
 
     respond_to do |format|
       format.html { redirect_to suppliers_url, notice: "Fornecedor excluído com sucesso." }
@@ -91,6 +91,6 @@ class SuppliersController < ApplicationController
   end
 
   def supplier_params
-    params.require(:supplier).permit(:name, :cnpj, sup_id)
+    params.require(:supplier).permit(:name, :cnpj, :id)
   end
 end

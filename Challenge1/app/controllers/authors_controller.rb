@@ -39,9 +39,72 @@ class AuthorsController < ApplicationController
   def gerar
     author_id = params[:author_id]
     @authors = Author.find_by(id: author_id)
+  end  
 
-    # Restante do código
+
+
+ 
+# app/controllers/authors_controller.rb
+
+def gerar_author_pdf
+  author_id = params[:author_id]
+  @authors = Author.find_by(id: author_id)
+
+  respond_to do |format|
+    format.pdf do
+      pdf = Prawn::Document.new
+
+    pdf.font_families.update(
+    'Roboto' => {
+      normal: Rails.root.join('app', 'assets', 'fonts', 'Roboto-Regular.ttf'),
+      italic: Rails.root.join('app', 'assets', 'fonts', 'Roboto-Italic.ttf'),
+      bold: Rails.root.join('app', 'assets', 'fonts', 'Roboto-Bold.ttf'),
+      bold_italic: Rails.root.join('app', 'assets', 'fonts', 'Roboto-BoldItalic.ttf')
+    }
+    )
+      pdf.font 'Roboto'
+      pdf.text "Relatório de Autor", size: 18, align: :center,style: :bold
+      pdf.stroke_horizontal_line(0, pdf.bounds.width, at: pdf.cursor - 2)
+      pdf.move_down 3
+      if @authors.present?
+        pdf.move_down 10
+        pdf.text "Dados", size: 12, style: :bold
+        pdf.move_down 4
+        pdf.text "ID Autor: #{@authors.id}", size: 10
+        pdf.move_down 3
+        pdf.text "Autor:     #{@authors.name}", size: 10
+        pdf.move_down 4
+        pdf.text "CPF:       #{@authors.cpf}", size: 10
+        pdf.move_down 10
+        pdf.stroke_horizontal_line(0, pdf.bounds.width, at: pdf.cursor - 2)
+        if @authors.books.present?
+          pdf.move_down 8
+          pdf.text "Livros", size: 12, style: :bold
+          pdf.move_down 3
+          books_data = [['ID', 'Título', 'ISBN', 'Publicação']]
+          @authors.books.each do |book|
+            books_data << [book.id, book.title, book.isbn, book.publishing.to_s]
+          end
+          pdf.table(books_data, header: true, width: pdf.bounds.width) do
+            row(0).font_style = :bold
+            self.row_colors = ['DDDDDD', 'FFFFFF']
+          end
+          pdf.move_down 8
+          pdf.text "Total de Livros: #{@authors.books.count}", size: 12, style: :bold,align: :center 
+          pdf.move_down 4
+          pdf.stroke_horizontal_line(0, pdf.bounds.width, at: pdf.cursor - 2)
+        else
+          pdf.text "Nenhum livro encontrado para este autor.", size: 10
+        end
+      else
+        pdf.text "Autor não encontrado.", size: 10
+      end
+
+      send_data pdf.render, filename: 'relatorio_autor.pdf', type: 'application/pdf', disposition: 'inline'
+    end
   end
+end
+
 
   def new
     @author = Author.new
@@ -92,6 +155,6 @@ class AuthorsController < ApplicationController
   end
 
   def author_params
-    params.require(:author).permit(:name,:cpf)
+    params.require(:author).permit(:name,:cpf, :sup_id)
   end
 end

@@ -1,5 +1,5 @@
 <div class="container mt-4">
-  <h1 class="text-center">Relatorio Autor</h1>
+  <h1 class="text-center">Relatório Autor</h1>
   <%= form_tag( relatorio_autor_path, method: "get", class: "text-center") do %>
     <div class="form-group row justify-content-center">
       <%= label_tag :search_author, "Nome do Autor:", class: "col-md-2 col-form-label" %>
@@ -24,6 +24,8 @@
           <tr>
             <th scope="col">ID Autor</th>
             <th scope="col">Autor</th>
+            <th scope="col">Criado</th>
+            <th scope="col">Atualizado</th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +33,9 @@
             <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
               <td><%= author.id %></td>
               <td><%= author.name %></td> 
-              <td colspan="3" class="text-right">
+              <td><%= author.created_at %></td> 
+              <td><%= author.updated_at %></td> 
+              <td>
             <%= link_to 'Gerar Relatório', gerar_path(author_id: author.id), class: 'btn btn-primary btn-sm' %>
              </td>
                           
