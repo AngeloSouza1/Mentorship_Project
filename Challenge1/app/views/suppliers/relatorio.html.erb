@@ -1,0 +1,50 @@
+<div class="container mt-4">
+  <h1 class="text-center">Relatório Fornecedor</h1>
+  <%= form_tag( relatorio_fornecedor_path, method: "get", class: "text-center") do %>
+    <div class="form-group row justify-content-center">
+      <%= label_tag :search_supplier, "Nome do Fornecedor:", class: "col-md-2 col-form-label" %>
+      <div class="col-md-6">
+        <div class="input-group">
+          <%= text_field_tag :search_supplier, params[:search_supplier], class: "form-control form-control-sm", placeholder: "Digite o nome do Fornecedor" %>
+          <div class="input-group-append">
+            <%= submit_tag "Filtrar", class: "btn btn-primary btn-sm" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="text-center mt-3">
+    <%= link_to "Voltar para Fornecedores", suppliers_path, class: "btn btn-secondary btn-sm" %>
+  </div>
+
+  <% if params[:search_supplier].present? %>
+    <% if @suppliers.present? %>
+     <table class="table table-sm table-auto mt-4">
+        <thead>
+          <tr>
+            <th scope="col">ID Fornecedor</th>
+            <th scope="col">Fornecedor</th>
+            <th scope="col">Criado</th>
+            <th scope="col">Atualizado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @suppliers.each_with_index do |supplier, index| %>
+            <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
+              <td><%= supplier.id %></td>
+              <td><%= supplier.name %></td> 
+              <td><%= supplier.created_at %></td> 
+              <td><%= supplier.updated_at %></td> 
+              <td>
+              <%= link_to 'Gerar Relatório', gerar_supplier_supplier_path(id: supplier.id, supplier_id: supplier.id), class: 'btn btn-primary btn-sm' %>
+             </td>           
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+        <br>    
+        <p class="text-center">Nenhum fornecedor encontrado.</p>
+    <% end %>
+  <% end %>
+</div>

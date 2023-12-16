@@ -15,30 +15,37 @@
   <% end %>
   <div class="text-center mt-3">
     <%= link_to "Voltar para Fornecedores", suppliers_path, class: "btn btn-secondary btn-sm" %>
-  </div>
-  <% if params[:search_name].present? %>
-    <% if @suppliers.present? %>
-      <table class="table table-sm mt-4">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>  
-            <th scope="col">Fornecedor</th>  
-            <th scope="col">CNPJ</th>  
-          </tr>
-        </thead>
-        <tbody>
-          <% @suppliers.each_with_index do |supplier, index| %>
-            <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
-              <td><%= supplier.id %></td> 
-              <td><%= supplier.name %></td> 
-              <td><%= supplier.cnpj %></td> 
+
+
+    </div>
+    <% if params[:search_name].present? %>
+      <% if @suppliers.present? %>
+        <table class="table table-sm mt-4">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>  
+              <th scope="col">Fornecedor</th>  
+              <th scope="col">CNPJ</th>  
+              <th scope="col">Autor Relacionado</th> 
             </tr>
-          <% end %>
-        </tbody>
-      </table>
-    <% else %>
-      <p>
-      <p class="text-center">Nenhum fornecedor encontrado.</p>
+          </thead>
+          <tbody>
+            <% @suppliers.each_with_index do |supplier, index| %>
+              <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
+                <td><%= supplier.id %></td> 
+                <td><%= supplier.name %></td> 
+                <td><%= supplier.cnpj %></td> 
+                <td>
+                <% supplier.authors.each do |author| %>
+                <li><%= author.name %></li>
+                 <% end %>      
+                </td> 
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p>
+        <p class="text-center">Nenhum fornecedor encontrado.</p>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>

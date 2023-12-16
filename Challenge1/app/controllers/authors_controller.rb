@@ -42,10 +42,6 @@ class AuthorsController < ApplicationController
   end  
 
 
-
- 
-# app/controllers/authors_controller.rb
-
 def gerar_author_pdf
   author_id = params[:author_id]
   @authors = Author.find_by(id: author_id)
@@ -88,6 +84,7 @@ def gerar_author_pdf
           pdf.table(books_data, header: true, width: pdf.bounds.width) do
             row(0).font_style = :bold
             self.row_colors = ['DDDDDD', 'FFFFFF']
+            cells.size = 10  
           end
           pdf.move_down 8
           pdf.text "Total de Livros: #{@authors.books.count}", size: 12, style: :bold,align: :center 

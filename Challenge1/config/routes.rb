@@ -18,10 +18,21 @@ Rails.application.routes.draw do
   get '/relatorio', to: 'authors#relatorio', as: 'relatorio_autor'
   get '/relatorio/gerar', to: 'authors#gerar', as: 'gerar'
   get 'gerar_author_pdf', to: 'authors#gerar_author_pdf', as: 'gerar_author_pdf'
+  get '/relatorioforn', to: 'suppliers#relatorio_supplier', as: 'relatorio_fornecedor'
+  get '/relatorio/gerarforn', to: 'suppliers#gerar_supplier', as: 'gerar_forn'
+  
 
   resources :authors do
     get 'gerar', on: :member
   end
-  get "up" => "rails/health#show", as: :rails_health_check
+
+  resources :suppliers do
+    get 'gerar_supplier', on: :member
+   end
  
+  resources :suppliers do
+      get 'gerar_supplier_pdf',  on: :member
+    end
+
+  get "up" => "rails/health#show", as: :rails_health_check
 end
