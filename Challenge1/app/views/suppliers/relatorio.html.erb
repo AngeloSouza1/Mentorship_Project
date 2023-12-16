@@ -33,8 +33,8 @@
             <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
               <td><%= supplier.id %></td>
               <td><%= supplier.name %></td> 
-              <td><%= supplier.created_at %></td> 
-              <td><%= supplier.updated_at %></td> 
+              <td><%= supplier.created_at.strftime("%d/%m/%Y %H:%M:%S") %></td> 
+              <td><%= supplier.updated_at.strftime("%d/%m/%Y %H:%M:%S") %></td> 
               <td>
               <%= link_to 'Gerar Relatório', gerar_supplier_supplier_path(id: supplier.id, supplier_id: supplier.id), class: 'btn btn-primary btn-sm' %>
              </td>           

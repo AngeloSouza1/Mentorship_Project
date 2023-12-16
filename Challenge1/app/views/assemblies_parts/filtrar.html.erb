@@ -30,7 +30,7 @@
       <tbody>
         <% @assemblies_parts.each do |assembly| %>
           <tr>
-            <td><%= assembly.assembly_id %></td>
+            <td><%= assembly.assembly.name %></td>
             <td><%= assembly.part.nome %></td>
           </tr>
         <% end %>

@@ -21,8 +21,9 @@
   
   <div>
     <%= form.label :author_id, "ID(Autor):", style: "display: block" %>
-    <%= form.number_field :author_id %>
-  </div>
+    <%= form.select :author_id, Author.all.map { |s| [s.name, s.id] }, { include_blank: "Selecione um autor" }, class: "form-control" %>
+
+    </div>
 
   <div>
     <%= form.label :publishing, "Publicado", style: "display: block" %>

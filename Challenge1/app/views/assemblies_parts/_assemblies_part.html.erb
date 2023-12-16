@@ -1,22 +1,33 @@
-<div id="<%= dom_id assemblies_part %>" class="text-center">
-  <p>
-    <strong>Montagem:</strong>
-    <%= assemblies_part.assembly_id %>
-  </p>
-
-  <p>
-    <strong>Peça:</strong>
-    <%= assemblies_part.part_id %>
-  </p>
-
-  <p>
-    <strong>Livro:</strong>
-    <%= assemblies_part.book.title if assemblies_part.book %>
-  </p>
-
-  <p>
-    <strong>Número Peça:</strong>
-    <%= assemblies_part.part.part_number if assemblies_part.part %>
-  </p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div id="<%= dom_id assemblies_part %>" class="text-center">
+        <div class="table-container">
+          <table class="table table-bordered table-striped">
+            <tbody>
+              <tr>
+                <th>Montagem</th>
+                <td><%= assemblies_part.assembly.name if assemblies_part.assembly%></td>       
+              <tr>
+                <th>Peça</th>
+                <td><%= assemblies_part.part.nome if assemblies_part.part%></td>
+                </tr>
+              <tr>
+                <th>Livro</th>
+                <td><%= assemblies_part.book.title if assemblies_part.book %></td>
+              </tr>
+              <tr>
+              <th>Número Peça</th>
+              <td><%= assemblies_part.part.part_number if assemblies_part.part %></td>
+            </tr>
+              <tr>
+              <th>Valor Peça</th>
+              <td><%= assemblies_part.part.valor if assemblies_part.part %></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<br>

@@ -19,9 +19,16 @@
   <%= form.text_field :nome %>
 </div>
 
-
+<div>
+<%= form.label :valor, "Valor:", style: "display: block" %>
+<%= form.text_field :valor %>
+</div>
 
   <div class="mt-3">
     <%= form.submit "Salvar", class: "btn btn-success btn-sm", style: "width: 60px;" %>
   </div>
 <% end %>
+
+
+
+

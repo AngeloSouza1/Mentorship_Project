@@ -109,28 +109,23 @@ class SuppliersController < ApplicationController
           end
           pdf.move_down 10
         end
-        
-        
-          pdf.stroke_horizontal_line(0, pdf.bounds.width, at: pdf.cursor - 2)
-          pdf.move_down 10
+               
           pdf.text "Livros", size: 12, style: :bold
           if @suppliers.authors.present?
-            pdf.move_down 8
-            pdf.text "Autores", size: 12, style: :bold
+            pdf.move_down 6
             pdf.move_down 3
-            authors_data = [['ID', 'Nome', 'CPF', 'Criado', 'Atualizado', 'Livros']]
+            authors_data = [['ID', 'Autor', 'Livros','ISBN', 'Publicação','Criado','Atualizado']]
             @suppliers.authors.each do |author|
-              # Concatene os títulos dos livros em uma string separada por vírgula
-              book_titles = author.books.map(&:title).join(', ')
-              authors_data << [author.id, author.name, author.cpf, author.created_at.strftime("%d/%m/%Y %H:%M:%S"), author.updated_at.strftime("%d/%m/%Y %H:%M:%S"), book_titles]
+              author.books.each do |book|
+                authors_data << [author.id, author.name, book.title, book.isbn, book.publishing.strftime("%d/%m/%Y %H:%M:%S"),book.created_at.strftime("%d/%m/%Y %H:%M:%S"), book.updated_at.strftime("%d/%m/%Y %H:%M:%S")]
+              end
             end
           
             pdf.table(authors_data, header: true, width: pdf.bounds.width) do
               row(0).font_style = :bold
               self.row_colors = ['DDDDDD', 'FFFFFF']
-              cells.size = 8  # Ajuste o tamanho da fonte diretamente aqui
+              cells.size = 10
             end
-          
             pdf.move_down 8
           end
           

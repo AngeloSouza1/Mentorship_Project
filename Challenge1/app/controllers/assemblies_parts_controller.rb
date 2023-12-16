@@ -11,7 +11,6 @@ class AssembliesPartsController < ApplicationController
   end
 
 
-
 def filtrar
   if params[:search_part].present?
     part_ids = Part.where("nome LIKE ?", "%#{params[:search_part]}%").pluck(:id)
@@ -22,7 +21,8 @@ def filtrar
   render :filtrar
 end
 
-  def show
+
+def show
     respond_to do |format|
       format.html
       format.json { render json: @assemblies_parts }

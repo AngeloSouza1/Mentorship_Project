@@ -26,6 +26,21 @@ class BooksController < ApplicationController
     render :filtrar  
   end
 
+  def relatorio_livro
+    if params[:search_book].present?
+      @books = Book.where("title LIKE ?", "%#{params[:search_book]}%")
+    else
+      @books = Book.all
+    end
+    render :relatorio
+  end
+
+  def gerar_livro
+    book_id = params[:book_id]
+    @books = Book.find_by(id: book_id)
+  end  
+
+
   def new
     @book = Book.new
   end

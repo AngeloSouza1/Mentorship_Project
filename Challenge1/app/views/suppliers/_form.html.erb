@@ -10,18 +10,17 @@
   <% end %>
 
    
+     <div>
+       <%= form.label :name, "Nome:", style: "display: block" %>
+       <%= form.text_field :name %>
+     </div>
+
     <div>
-    <%= form.label :name, "Nome:", style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+      <%= form.label :cnpj, "CNPJ:", style: "display: block" %>
+      <%= form.text_field :cnpj%>
+    </div>
 
-  <div>
-  <%= form.label :cnpj, "CNPJ:", style: "display: block" %>
-  <%= form.text_field :cnpj%>
- </div>
-
-
-  <div class="mt-3">
+    <div class="mt-3">
     <%= form.submit "Salvar", class: "btn btn-success btn-sm", style: "width: 60px;" %>
   </div>
 
