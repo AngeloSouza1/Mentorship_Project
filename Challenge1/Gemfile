@@ -4,8 +4,17 @@ ruby "3.0.2"
 
 gem 'maskedinput-rails'
 
-gem 'wicked_pdf'
+gem 'prawn'
 
+gem 'prawn-table'
+
+gem 'wkhtmltopdf-binary'
+
+gem 'rack', '~> 2.2'
+
+gem 'json', '~> 2.5', '>= 2.5.1'
+
+gem 'json_pure', '~> 2.5'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"

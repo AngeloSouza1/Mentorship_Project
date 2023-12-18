@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_06_175518) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_16_150429) do
   create_table "accounts", force: :cascade do |t|
     t.integer "supplier_id"
     t.string "account_number"
@@ -57,6 +57,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_175518) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "cpf"
+    t.integer "sup_id"
   end
 
   create_table "books", force: :cascade do |t|
@@ -73,6 +74,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_175518) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "nome"
+    t.decimal "valor"
   end
 
   create_table "suppliers", force: :cascade do |t|

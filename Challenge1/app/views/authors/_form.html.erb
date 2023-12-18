@@ -18,11 +18,14 @@
   </div>
 
   <div>
-  <%= form.label :name,"CPF:", style: "display: block" %>
+  <%= form.label :cpf,"CPF:", style: "display: block" %>
   <%= form.text_field :cpf %>
+  </div>
+
+  <div>
+  <%= form.label :sup_id,"Fornecedor:", style: "display: block" %>
+  <%= form.select :sup_id, Supplier.all.map { |s| [s.name, s.id] }, { include_blank: "Selecione um fornecedor" }, class: "form-control" %>
 </div>
-
-
 
   <div class="mt-3">
     <%= form.submit "Salvar", class: "btn btn-success btn-sm", style: "width: 60px;" %>

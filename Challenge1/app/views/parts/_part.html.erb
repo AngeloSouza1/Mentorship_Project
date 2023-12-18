@@ -1,15 +1,31 @@
-<div id="<%= dom_id part %>">
-  <p>
-    <strong>ID:</strong>
-    <%= part.id %>
-  </p>
- 
-  <p>
-    <strong>Número da Peça:</strong>
-    <%= part.part_number %>
-  </p>
-  <p>
-    <strong>Nome da Peça:</strong>
-    <%= part.nome %>
-  </p>
+<div class="container">
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div id="<%= dom_id  part %>" class="text-center">
+      <div class="table-container">
+        <table class="table table-bordered table-striped">
+          <tbody>
+            <tr>
+              <th>ID</th>
+              <td><%= part.id%></td>
+            </tr>
+            <tr>
+              <th>Número da Peça</th>
+              <td><%= part.part_number %></td>
+            </tr>
+            <tr>
+              <th>Nome da Peça</th>
+              <td><%=part.nome %></td>
+           </tr>
+            <tr>
+              <th>Valor da Peça</th>
+              <td><%= number_to_currency(part.valor, unit: "R$", separator: ",", delimiter: ".", format: "%u %n") %></td>
+
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

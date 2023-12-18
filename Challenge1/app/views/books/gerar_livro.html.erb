@@ -1,0 +1,118 @@
+<div class="container mt-4">
+  <h2>Relatório Livros com Montagem</h2>
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Dados</h5>
+  <div class="mt-4">
+    <% if @book.present? %>
+      <p><strong>ID:</strong> <%= @book.id %></p>
+      <p><strong>Título:</strong> <%= @book.title %></p>
+      <p><strong>Publicação:</strong> <%= @book.publishing.strftime("%d/%m/%Y %H:%M:%S") %></p>
+    <% else %>
+      <p class="text-danger">Livro não encontrado.</p>
+    <% end %>
+  </div>
+
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Montagens</h5>
+  <div>
+    <% if @book.assemblies_parts.present? %>
+      <table class="table table-sm table-auto table-condensed mt-4">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Montagem</th>
+            <th scope="col">Peça</th>
+            <th scope="col">Criado</th>
+            <th scope="col">Atualizado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @book.assemblies_parts.each_with_index do |part, index| %>
+            <tr class="<%= cycle('table-light', 'table-white', name: 'part_row') %>">
+              <td><%= part.id %></td>
+              <td><%= Assembly.find(part.assembly_id).name %></td>
+              <td><%= Part.find(part.part_id).nome %></td>
+              <td><%= part.created_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+              <td><%= part.updated_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <br>
+      <p class="text-center">Nenhuma montagem encontrada para este livro.</p>
+    <% end %>
+  </div>
+
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Peças</h5>
+  <div>
+    <% if @book.assemblies_parts.present? %>
+      <table class="table table-sm table-auto table-condensed mt-4">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Peça</th>
+            <th scope="col">Número da Peça</th>
+            <th scope="col">Valor da Peça</th>
+            <th scope="col">Criado</th>
+            <th scope="col">Atualizado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% total_valor = 0 %>
+          <% @book.assemblies_parts.each_with_index do |part, index| %>
+            <tr class="<%= cycle('table-light', 'table-white', name: 'part_row') %>">
+              <td><%= part.id %></td>
+              <td><%= Part.find(part.part_id).nome %></td>
+              <td><%= Part.find(part.part_id).part_number %></td>
+              <td><%= number_to_currency(Part.find(part.part_id).valor, unit: "R$", format: "%u %n") %></td>
+              <td><%= Part.find(part.part_id).created_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+              <td><%= Part.find(part.part_id).updated_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+              <% total_valor += Part.find(part.part_id).valor %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <br>
+      <p class="text-center">Nenhuma peça encontrada para este livro.</p>
+    <% end %>
+  </div>
+
+  <% unique_assemblies = @book.assemblies_parts.map { |part| Assembly.find(part.assembly_id) }.uniq %>
+  
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Cálculos</h5>
+  <div>
+    <% if unique_assemblies.present? %>
+      <table class="table table-sm table-auto table-condensed mt-4">
+        <thead>
+          <tr>
+            <th scope="col">Montagem</th>
+            <th scope="col">Total de Peças</th>
+            <th scope="col">Custo da Montagem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% unique_assemblies.each do |assembly| %>
+            <% assembly_parts = @book.assemblies_parts.select { |part| part.assembly_id == assembly.id } %>
+            <% total_valor_assembly = assembly_parts.sum { |part| Part.find(part.part_id).valor } %>
+            <tr class="<%= cycle('table-light', 'table-white', name: 'assembly_row') %>">
+              <td><%= assembly.name %></td>
+              <td><%= assembly_parts.count %></td>
+              <td><%= number_to_currency(total_valor_assembly, unit: "R$", format: "%u %n") %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <br>
+      <p class="text-center">Nenhum cálculo disponível para este livro.</p>
+    <% end %>
+  </div>
+
+  <div class="mt-2 text-right" style="color: green;">
+    <h6>Total de Peças: <%= @book.assemblies_parts.count %></h6>
+    <h6>Total do Valor das Montagens: <%= total_valor.nil? ? number_to_currency(0, unit: "R$", format: "%u %n") : number_to_currency(total_valor, unit: "R$", format: "%u %n") %></h6>
+  </div>
+  
+  <%= link_to 'Gerar PDF',  gerar_livro_pdf_path(format: :pdf, book_id: @book.id), class: 'btn btn-success btn-sm ', target: '_blank' %>
+  <button onclick="history.back()" class="btn btn-secondary btn-sm">Voltar</button>
+</div>

@@ -1,0 +1,56 @@
+<div class="container mt-4">
+   <br>
+  <h2>Relatório Autor</h2>
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Dados</h5>
+
+  <div class="mt-4">
+    <% if @authors.present? %>
+      <p><strong>ID Autor:</strong> <%= @authors.id %></p>
+      <p><strong>Autor:</strong> <%= @authors.name %></p>
+      <p><strong>CPF:</strong> <%= @authors.cpf %></p>
+    <% else %>
+      <p class="text-danger">Autor não encontrado.</p>
+    <% end %>
+  </div>
+
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Livros</h5>
+  <div>
+    <% if @authors.present? %>
+      <% if @authors.books.present? %>
+        <table class="table table-sm table-auto mt-4">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Título</th>
+              <th scope="col">ISBN</th>
+              <th scope="col">Publicação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @authors.books.each_with_index do |book, index| %>
+              <tr class="<%= cycle('table-light', 'table-white', name: 'book_row') %>">
+                <td><%= book.id %></td>
+                <td><%= book.title %></td>
+                <td><%= book.isbn %></td>
+                <td><%= book.publishing.strftime("%d/%m/%Y %H:%M:%S") %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <br>
+        <p class="text-center">Nenhum livro encontrado para este autor.</p>
+      <% end %>
+    <% else %>
+      <br>
+      <p class="text-center">Nenhum autor encontrado.</p>
+    <% end %>
+  </div>
+  <div class="mt-2 text-right" style="color: green;">
+  <h6>Total de Livros: <%= @authors.books.count %></h6>
+  </div>
+  <%= link_to 'Gerar PDF', gerar_author_pdf_path(format: :pdf, author_id: @authors.id), class: 'btn btn-success btn-sm ', target: '_blank' %>
+  <button onclick="history.back()" class="btn btn-secondary btn-sm">Voltar</button>
+  </div>
+
+

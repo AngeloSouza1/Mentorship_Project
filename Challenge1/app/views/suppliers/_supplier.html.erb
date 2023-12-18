@@ -1,12 +1,26 @@
-<div id="<%= dom_id supplier %>">
-  <p>
-    <strong>Nome:</strong>
-    <%= supplier.name %>
-  </p>
-
-  <p>
-  <strong>Cnpj:</strong>
-  <%= supplier.cnpj %>
-</p>
-
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div id="<%= dom_id supplier %>" class="text-center">
+        <div class="table-container">
+          <table class="table table-bordered table-striped">
+            <tbody>
+              <tr>
+                <th>ID</th>
+                <td><%= supplier.id %></td>
+              </tr>
+              <tr>
+                <th>Nome</th>
+                <td><%= supplier.name %></td>
+              </tr>
+              <tr>
+                <th>CNPJ</th>
+                <td><%= supplier.cnpj %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

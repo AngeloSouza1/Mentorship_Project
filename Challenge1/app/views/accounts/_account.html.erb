@@ -1,40 +1,32 @@
 <div id="<%= dom_id account %>" class="text-center">
-  <style>
-    .custom-table {
-      width: 75%;
-      margin: 0 auto;
-    }
-
-    .custom-table th,
-    .custom-table td {
-      padding: 0.6rem;
-      line-height: 0.95; /* Ajuste o valor conforme necessário para reduzir a altura em 5% */
-    }
-
-    .custom-table th {
-      background-color: #f7f7f7;
-    }
-  </style>
-
-  <table class="table table-condensed table-striped table-bordered custom-table">
-    <tr>
-      <th>ID:</th>
-      <td><%= account.supplier_id %></td>
-    </tr>
-    <tr>
-      <th>Número da Conta:</th>
-      <td><%= account.account_number %></td>
-    </tr>
-    <tr>
-      <th>Dígito da Conta:</th>
-      <td><%= account.digito_verificador %></td>
-    </tr>
-    <tr>
-      <th>Nome do Fornecedor:</th>
-      <td>
-        <%= account.supplier.present? ? account.supplier.name : "Nenhum fornecedor selecionado" %>
-      </td>
-    </tr>
-  </table>
-  <p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <div class="table-container">
+          <table class="table table-condensed table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th>ID:</th>
+                <td><%= account.supplier_id %></td>
+              </tr>
+              <tr>
+                <th>Número da Conta:</th>
+                <td><%= account.account_number %></td>
+              </tr>
+              <tr>
+                <th>Dígito da Conta:</th>
+                <td><%= account.digito_verificador %></td>
+              </tr>
+              <tr>
+                <th>Nome do Fornecedor:</th>
+                <td>
+                  <%= account.supplier.present? ? account.supplier.name : "Nenhum fornecedor selecionado" %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
