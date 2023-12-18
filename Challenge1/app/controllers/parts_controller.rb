@@ -78,6 +78,6 @@ class PartsController < ApplicationController
   end
 
   def part_params
-    params.require(:part).permit(:part_number, :nome) 
+    params.require(:part).permit(:part_number, :nome,:valor) 
   end
 end

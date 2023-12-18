@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="form-group col-md-4 mx-auto text-center">
-    <%= form.label :assembly_id, "ID da Montagem:", class: "d-block" %>
-    <%= form.text_field :assembly_id, class: "form-control form-control-sm text-center" %>
+    <%= form.label :assembly_id, "Montagem", class: "d-block" %>
+    <%= form.collection_select :assembly_id, Assembly.all, :id, :name, { prompt: "Selecione uma montagem" }, class: "form-control form-control-sm text-center" %>
+    </div>
+
+  <div class="form-group col-md-4 mx-auto text-center">
+    <%= form.label :part_id, "Peça", class: "d-block" %>
+    <%= form.collection_select :part_id, Part.all, :id, :nome, { prompt: "Selecione uma peça" }, class: "form-control form-control-sm text-center" %>
   </div>
 
   <div class="form-group col-md-4 mx-auto text-center">
-    <%= form.label :part_id, "ID da Peça:", class: "d-block" %>
-    <%= form.text_field :part_id, class: "form-control form-control-sm text-center" %>
-  </div>
-
-  <div class="form-group col-md-4 mx-auto text-center">
-    <%= form.label :book_id, "Livro:", class: "d-block" %>
+    <%= form.label :book_id, "Livro", class: "d-block" %>
     <%= form.collection_select :book_id, Book.all, :id, :title, { prompt: "Selecione um livro" }, class: "form-control form-control-sm text-center" %>
     <br>
   </div>

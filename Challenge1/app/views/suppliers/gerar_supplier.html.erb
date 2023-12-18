@@ -1,0 +1,88 @@
+<div class="container mt-4">
+  <br>
+  <h2>Relatório Fornecedor</h2>
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Dados</h5>
+
+  <div class="mt-4">
+    <% if @suppliers.present? %>
+      <p><strong>ID Fornecedor:</strong> <%= @suppliers.id %></p>
+      <p><strong>Nome:</strong> <%= @suppliers.name %></p>
+      <p><strong>CNPJ:</strong> <%= @suppliers.cnpj %></p>
+    <% else %>
+      <p class="text-danger">Fornecedor não encontrado.</p>
+    <% end %>
+  </div>
+
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Autores</h5>
+
+  <div>
+    <% if @suppliers.present? %>
+      <% if @suppliers.authors.present? %>
+        <table class="table table-sm table-auto mt-4">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Criado</th>
+              <th scope="col">Atualizado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @suppliers.authors.each_with_index do |author, index| %>
+              <tr class="<%= cycle('table-light', 'table-white', name: 'author_row') %>">
+                <td><%= author.id %></td>
+                <td><%= author.name %></td>
+                <td><%= author.cpf %></td>
+                <td><%= author.created_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+                <td><%= author.updated_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <br>
+        <p class="text-center">Nenhum Autor encontrado.</p>
+      <% end %>
+    <% else %>
+      <br>
+      <p class="text-center">Nenhum autor encontrado.</p>
+    <% end %>
+  </div>
+
+  <h5 style="background-color: #e6f7ff; padding: 5px; border-radius: 5px;">Livros</h5>
+  <% if @suppliers.authors.present? %>
+  <div>
+  <% @suppliers.authors.each_with_index do |author, index| %>
+    <div class="<%= cycle('bg-light', 'bg-white', name: 'author_block') %>">
+      <h6 class="text-primary">Autor: <%= author.name %></h6>
+      <% if author.books.present? %>
+        <ul class="list-unstyled">
+          <% author.books.each do |book| %>
+            <li class="mb-3">
+              <h7><strong>Título:</strong> <%= book.title %></h7>
+              <ul class="list-unstyled">
+                <li><strong>ISBN:</strong> <%= book.isbn %></li>
+                <li><strong>Publicação:</strong> <%= book.publishing %></li>
+                <li><strong>Criado:</strong> <%= book.created_at.strftime("%d/%m/%Y %H:%M:%S") %></li>
+                <li><strong>Atualizado:</strong> <%= author.updated_at.strftime("%d/%m/%Y %H:%M:%S") %></li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>Sem livros cadastrados.</p>
+      <% end %>
+    </div>
+    <!-- Adiciona uma linha horizontal entre os blocos de autor -->
+    <hr class="my-4">
+  <% end %>
+</div>
+
+
+  <% else %>
+  <p class="text-center">Nenhum Livro cadastrado.</p>
+          <% end %> 
+  <%= link_to 'Gerar PDF', gerar_supplier_pdf_supplier_path(supplier_id: @suppliers.id, format: :pdf), class: 'btn btn-success btn-sm', target: '_blank' %>
+  <button onclick="history.back()" class="btn btn-secondary btn-sm">Voltar</button>
+</div>

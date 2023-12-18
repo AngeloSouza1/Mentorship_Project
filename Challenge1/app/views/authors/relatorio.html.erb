@@ -1,0 +1,56 @@
+<div class="container mt-4">
+  <h1 class="text-center">Relatório Autor</h1>
+  <%= form_tag(relatorio_autor_path, method: "get", class: "text-center") do %>
+    <div class="form-group row justify-content-center">
+      <%= label_tag :search_author, "Nome do Autor:", class: "col-md-2 col-form-label" %>
+      <div class="col-md-6">
+        <div class="input-group">
+          <%= text_field_tag :search_author, params[:search_author], class: "form-control form-control-sm", placeholder: "Digite o nome do Autor" %>
+          <div class="input-group-append">
+            <%= submit_tag "Filtrar", class: "btn btn-primary btn-sm" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="text-center mt-3">
+    <%= link_to "Voltar para Autores", authors_path, class: "btn btn-secondary btn-sm" %>
+  </div>
+  
+  <% if params[:search_author].present? %>
+    <% if @authors.present? %>
+     <table class="table table-sm table-auto mt-4">
+        <thead>
+          <tr>
+            <th scope="col">ID Autor</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Criado</th>
+            <th scope="col">Atualizado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @authors.each_with_index do |author, index| %>
+            <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
+              <td><%= author.id %></td>
+              <td><%= author.name %></td> 
+              <td><%= author.created_at %></td> 
+              <td><%= author.updated_at %></td> 
+              <td>
+            <%= link_to 'Gerar Relatório', gerar_path(author_id: author.id), class: 'btn btn-primary btn-sm' %>
+             </td>
+                          
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+        <br>    
+        <p class="text-center">Nenhum autor encontrado.</p>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+
+

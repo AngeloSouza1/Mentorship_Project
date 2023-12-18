@@ -1,0 +1,50 @@
+<div class="container mt-4">
+  <h1 class="text-center">Relatório Livros com Montagem</h1>
+  <%= form_tag(relatorio_livro_path, method: "get", class: "text-center") do %>
+    <div class="form-group row justify-content-center">
+      <%= label_tag :search_book, "Nome do Livro:", class: "col-md-2 col-form-label" %>
+      <div class="col-md-6">
+        <div class="input-group">
+          <%= text_field_tag :search_book, params[:search_book], class: "form-control form-control-sm", placeholder: "Digite o nome do Livro" %>
+          <div class="input-group-append">
+            <%= submit_tag "Filtrar", class: "btn btn-primary btn-sm" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="text-center mt-3">
+    <%= link_to "Voltar para Livros", books_path, class: "btn btn-secondary btn-sm" %>
+  </div>
+  
+  <% if params[:search_book].present? %>
+    <% if @books.present? %>
+     <table class="table table-sm table-auto mt-4">
+        <thead>
+          <tr>
+            <th scope="col">ID </th>
+            <th scope="col">Título</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @books.each_with_index do |book, index| %>
+            <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
+              <td><%= book.id %></td>
+              <td><%= book.title %></td> 
+              <td>
+              <%= link_to 'Gerar Relatório', gerar_livro_book_path(book.id), class: 'btn btn-primary btn-sm' %>
+              </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+        <br>    
+        <p class="text-center">Nenhum autor encontrado.</p>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+
+

@@ -2,9 +2,8 @@
   <p class="alert "><%= notice %></p>
   <h1>Livros</h1>
   <%= link_to "Novo Livro",new_book_path, class: "btn btn-success mt-3" %>
-  
   <%= link_to "Filtrar Livros", filtrar_livros_path, class: "btn btn-primary mt-3" %>
- 
+  <%= link_to "Relatório Livros", relatorio_livro_path, class: "btn btn-primary mt-3" %>
   <div id="books" class="mx-auto">
     <% @books.each do |book| %>
       <br>

@@ -2,10 +2,7 @@
   <p class="alert "><%= notice %></p>
   <h1>Contas</h1>
   <%= link_to "Nova Conta", new_account_path, class: "btn btn-success mt-3" %>
- 
-  <%= link_to "Filtrar Contas", filtrar_contas_path, class: "btn btn-primary mt-3" %>
-
-  
+   <%= link_to "Filtrar Contas", filtrar_contas_path, class: "btn btn-primary mt-3" %>
   <div id="accounts" class="mx-auto">
     <% @accounts.each do |account| %>
       <br>
