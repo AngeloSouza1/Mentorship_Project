@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/relatorioforn', to: 'suppliers#relatorio_supplier', as: 'relatorio_fornecedor'
   get '/relatorio/gerarforn', to: 'suppliers#gerar_supplier', as: 'gerar_forn'
   get '/relatorio_livro', to: 'books#relatorio_livro', as: 'relatorio_livro'
+  get 'gerar_livro_pdf', to: 'books#gerar_livro_pdf', as: :'gerar_livro_pdf'
 
   resources :authors do
     get 'gerar', on: :member
@@ -34,7 +35,6 @@ Rails.application.routes.draw do
   resources :books do
      get 'gerar_livro',  on: :member
     end
-
-
+ 
   get "up" => "rails/health#show", as: :rails_health_check
 end

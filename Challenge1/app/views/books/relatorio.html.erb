@@ -32,7 +32,7 @@
               <td><%= book.id %></td>
               <td><%= book.title %></td> 
               <td>
-              <%= link_to 'Gerar Relatório', gerar_livro_book_path(id: book.id), class: 'btn btn-primary btn-sm' %>
+              <%= link_to 'Gerar Relatório', gerar_livro_book_path(book.id), class: 'btn btn-primary btn-sm' %>
               </tr>
           <% end %>
         </tbody>

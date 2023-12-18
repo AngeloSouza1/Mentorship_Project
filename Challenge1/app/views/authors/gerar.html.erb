@@ -32,7 +32,7 @@
                 <td><%= book.id %></td>
                 <td><%= book.title %></td>
                 <td><%= book.isbn %></td>
-                <td><%= book.publishing %></td>
+                <td><%= book.publishing.strftime("%d/%m/%Y %H:%M:%S") %></td>
               </tr>
             <% end %>
           </tbody>

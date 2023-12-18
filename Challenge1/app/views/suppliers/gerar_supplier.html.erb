@@ -64,8 +64,8 @@
               <ul class="list-unstyled">
                 <li><strong>ISBN:</strong> <%= book.isbn %></li>
                 <li><strong>Publicação:</strong> <%= book.publishing %></li>
-                <li><strong>Criado:</strong> <%= book.created_at %></li>
-                <li><strong>Atualizado:</strong> <%= book.updated_at %></li>
+                <li><strong>Criado:</strong> <%= book.created_at.strftime("%d/%m/%Y %H:%M:%S") %></li>
+                <li><strong>Atualizado:</strong> <%= author.updated_at.strftime("%d/%m/%Y %H:%M:%S") %></li>
               </ul>
             </li>
           <% end %>
