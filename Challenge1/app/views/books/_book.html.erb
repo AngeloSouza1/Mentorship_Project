@@ -1,39 +1,38 @@
-
 <div class="container">
-<div class="row justify-content-center">
-  <div class="col-8">
-    <div id="<%= dom_id  book %>" class="text-center">
-      <div class="table-container">
-        <table class="table table-bordered table-striped">
-           <tbody>
-             <tr>
-               <th>ID</th>
-                 <td><%= book.id%></td>
-               </th>
-             </tr>
-              <th>Título</th>
-              <td><%= book.title%></td>
-            </tr>
-            <tr>
-              <th>ID Autor</th>
-              <td><%= book.author_id %></td>
-            </tr>
-            <tr>
-              <th>Autor</th>
-              <td><%= book.author.name %></td>
-           </tr>
-            <tr>
-              <th>ISBN</th>
-              <td><%=  book.isbn %></td>
-            </tr>
-            <tr>
-              <th>Publicado</th>
-              <td><%= book.publishing %></td>
-            </tr>
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div id="<%= dom_id book %>" class="text-leftr">
+        <div class="table-container">
+          <table class="table table-bordered table-striped rounded">
+            <tbody>
+              <tr>
+                <th class="text-left">ID</th>
+                <td class="text-left"><%= book.id %></td>
+              </tr>
+              <tr>
+                <th class="text-left">Título</th>
+                <td class="text-left"><%= book.title %></td>
+              </tr>
+              <tr>
+                <th class="text-left">ID Autor</th>
+                <td class="text-left"><%= book.author_id %></td>
+              </tr>
+              <tr>
+                <th class="text-left">Autor</th>
+                <td class="text-left"><%= book.author.name %></td>
+              </tr>
+              <tr>
+                <th class="text-left">ISBN</th>
+                <td class="text-left"><%= book.isbn %></td>
+              </tr>
+              <tr>
+                <th class="text-left">Publicado</th>
+                <td class="text-left"><%= book.publishing %></td>
+              </tr>
             </tbody>
-        </table>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>

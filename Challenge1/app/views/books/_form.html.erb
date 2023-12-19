@@ -21,7 +21,7 @@
   
   <div>
     <%= form.label :author_id, "ID(Autor):", style: "display: block" %>
-    <%= form.select :author_id, Author.all.map { |s| [s.name, s.id] }, { include_blank: "Selecione um autor" }, class: "form-control" %>
+    <%= form.select :author_id, Author.all.map { |s| [s.name, s.id] }, { include_blank: "Selecione um autor" }, class: "form-control text-center" %>
 
     </div>
 

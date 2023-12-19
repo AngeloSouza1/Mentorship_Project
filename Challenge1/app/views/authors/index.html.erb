@@ -4,7 +4,7 @@
   <%= link_to "Novo Autor", new_author_path, class: "btn btn-success mt-3" %>
   <%= link_to "Filtrar Livros", filtrar_autor_path, class: "btn btn-primary mt-3" %>
   <%= link_to "Relatório Autores",relatorio_autor_path, class: "btn btn-primary mt-3" %>
-  <div id="authors" class="mx-auto">
+    <div id="authors" class="mx-auto">
     <% @authors.each do |author| %>
       <br>
       <%= render author %>
