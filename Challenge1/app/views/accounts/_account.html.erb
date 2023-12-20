@@ -10,15 +10,15 @@
                 <td><%= account.supplier_id %></td>
               </tr>
               <tr>
-                <th>Número da Conta:</th>
+                <th>Número da Conta</th>
                 <td><%= account.account_number %></td>
               </tr>
               <tr>
-                <th>Dígito da Conta:</th>
+                <th>Dígito da Conta</th>
                 <td><%= account.digito_verificador %></td>
               </tr>
               <tr>
-                <th>Nome do Fornecedor:</th>
+                <th>Nome do Fornecedor</th>
                 <td>
                   <%= account.supplier.present? ? account.supplier.name : "Nenhum fornecedor selecionado" %>
                 </td>

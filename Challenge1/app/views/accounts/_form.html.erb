@@ -11,16 +11,17 @@
   
   <div class="form-group">
     <%= form.label :supplier_id, "Fornecedor", class: "control-label" %>
-    <%= form.select :supplier_id, Supplier.all.map { |s| [s.name, s.id] }, { include_blank: "Selecione um fornecedor" }, class: "form-control" %>
+    <%= form.select :supplier_id, Supplier.all.map { |s| [s.name, s.id] }, { include_blank: "Selecione um fornecedor" },  class: "form-control text-center" %>
   </div>
-  
+  <p>
   <div class="form-group">
+   
     <%= form.label :account_number, "Número da Conta:" %>
     <%= form.text_field :account_number, class: "form-control" %>
   </div>
 
-  <div class="mt-3">
-    <%= form.submit "Salvar", class: "btn btn-success btn-sm", style: "width: 60px;" %>
+  <div class="mt-3 d-flex justify-content-center">
+  <%= form.submit "Salvar", class: "btn btn-success btn-sm", style: "width: 60px;" %>
   </div>
 <% end %>
 
