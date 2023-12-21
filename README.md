@@ -124,7 +124,7 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 - Montatem por nome em Peça
 - Fornecedor por nome do Autor 
 
-### 5. Batalha  - *Relatórios*
+### 5. Batalha  - *RELATÓRIOS*
 - Adição do Campo valor em Peça
 - Autor(com todas as informações) com seus Livros(com todas as informações) e o total de livros publicados
 - Forneceor(com todas as informações) com todos os autores(com todas as informações) e livros(com todas as informações)
