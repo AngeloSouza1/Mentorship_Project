@@ -12,6 +12,12 @@ No contexto deste desafio, abordamos a integração de Bancos de Dados e seus Re
 - System Linux:  Linux Mint 21.2
 - DataBase : SQLITE
 
+#### Funcionalidades!
+- [Assista ao vídeo de demonstração 1](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192610&Signature=8a8b9ae748d68909687d85b73eade345655cbd24)
+- [Assista ao vídeo de demonstração 2](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/004c3faf-a348-422f-a5ce-9fed5f4f3893.gif?ClientID=vimeo-core-prod&Date=1703193109&Signature=8e19b4a40bcb32e854cf6045794d50d8f4249df4)
+- [Assista ao vídeo de demonstração 3](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/1be41e9a-a605-4eff-8496-d533d4f322b9.gif?ClientID=vimeo-core-prod&Date=1703197689&Signature=2c63e0b68eefc89d1ed431955498050aaea9fe24)
+- [Assista ao vídeo de demonstração 4](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/47904b9f-64e5-49a9-b29e-594437e48204.gif?ClientID=vimeo-core-prod&Date=1703198042&Signature=fb75f3a8ea818cf19020198ee7c193c298e9d135)
+  
 ### 1. Batalha  - *DATABASE*   
  #### 1.1 - Implementação dos Bancos de Dados
 - BD Fornecimento
@@ -79,11 +85,12 @@ O relacionamento entre as tabelas assemblies e parts através da tabela associat
 </p>
 
 #### 1.2 - Implementação dos C.R.U.D.S <br>
-- Crud para Cadastrar Autores -[ Assista ao vídeo de demonstração](https://vimeo.com/888319890/2e6803702c)
-- Crud para Cadastrar Livros vinculando com Autor-[ Assista ao vídeo de demonstração](https://vimeo.com/888323765/a4f32ee0c9) 
-- Crud para Cadastrar Fornecedores com uma Conta-[ Assista ao vídeo de demonstração](https://vimeo.com/888319472/72ea688605)
-- Crud para Cadastrar Peças vinculando com Fornecedor-[ Assista ao vídeo de demonstração](https://vimeo.com/888319213/3d1aa00baf)
-- Crud para Cadastrar Montagens com várias Peças e vinculando com Livro-[ Assista ao vídeo de demonstração](https://vimeo.com/888324184/a00d4713ff)
+- Crud para Cadastrar Autores -[ Assista ao vídeo de demonstração](https://vimeo.com/897010192/80cde76f52)
+- Crud para Cadastrar Livros vinculando com Autor-[ Assista ao vídeo de demonstração](https://vimeo.com/897025458/5a65e2878e)
+- Crud para Cadastrar Fornecedores com uma Conta-[ Assista ao vídeo de demonstração](https://vimeo.com/897027139/f49b7d2789)
+- Crud para Cadastrar Peças vinculando com Fornecedor-[ Assista ao vídeo de demonstração](https://vimeo.com/897032265/862b03d451)
+- Crud para Cadastrar Montagens com várias Peças e vinculando com Livro-[ Assista ao vídeo de demonstração](https://vimeo.com/897032999/5eb055b83d)
+  
 
 ### 2. Batalha  - *APIS*   
 #### 2.1 - Implementação dos C.R.U.D.S <br>
@@ -117,7 +124,11 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 - Montatem por nome em Peça
 - Fornecedor por nome do Autor 
 
-
+### 5. Batalha  - *RELATÓRIOS*
+- Adição do Campo valor em Peça
+- Autor(com todas as informações) com seus Livros(com todas as informações) e o total de livros publicados
+- Forneceor(com todas as informações) com todos os autores(com todas as informações) e livros(com todas as informações)
+- Livros com a montagem(com todas as informações) com suas peças (com todas as informações), o total de peças e o custo total da montagem.
 
 
 
