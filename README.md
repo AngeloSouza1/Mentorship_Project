@@ -14,8 +14,7 @@ No contexto deste desafio, abordamos a integração de Bancos de Dados e seus Re
 
 #### Funcionalidades!
 - [Assista ao vídeo de demonstração 1](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192610&Signature=8a8b9ae748d68909687d85b73eade345655cbd24)
-- [Assista ao vídeo de demonstração 2](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192882&Signature=cbc8bef121599f0186c157969e0fcdb100d0ecef)
-
+- [Assista ao vídeo de demonstração 2](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/004c3faf-a348-422f-a5ce-9fed5f4f3893.gif?ClientID=vimeo-core-prod&Date=1703193109&Signature=8e19b4a40bcb32e854cf6045794d50d8f4249df4)
 
 
 ### 1. Batalha  - *DATABASE*   
