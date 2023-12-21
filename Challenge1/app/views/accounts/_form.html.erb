@@ -10,6 +10,11 @@
   <% end %>
   
   <div class="form-group">
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
     <%= form.label :supplier_id, "Fornecedor", class: "control-label" %>
     <%= form.select :supplier_id, Supplier.all.map { |s| [s.name, s.id] }, { include_blank: "Selecione um fornecedor" },  class: "form-control text-center" %>
   </div>

@@ -6,8 +6,9 @@
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
-<body>
+
+  </head>
+  <body >
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="padding-top: 5px; padding-bottom: 5px;">
   <div class="container">
@@ -52,40 +53,14 @@
   </nav>
 
 <br>
-<div class="container-fluid">
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 75vh;">
   <div class="row">
     <div class="col-md-3">
-      <div class="container text-center bg-primary">
-     
-        <h2>Container 1</h2>
-        <img src="/images/books.jpg" alt="Descrição da imagem" style="width: 500px; height: 500px;">
-
+      <div class>
+           <%= image_tag 'OIG (2).jpeg', alt: 'Descrição da imagem', style: 'width: 400px; height: 330px;' %>
       </div>
-    </div>
-    <div class="col-md-3">
-      <div class="container text-center bg-secondary">
-        <!-- Conteúdo do segundo container -->
-        <h2>Container 2</h2>
-        <p>Seu conteúdo aqui...</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="container text-center bg-success">
-        <!-- Conteúdo do terceiro container -->
-        <h2>Container 3</h2>
-        <p>Seu conteúdo aqui...</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="container text-center bg-info">
-        <!-- Conteúdo do quarto container -->
-        <h2>Container 4</h2>
-        <p>Seu conteúdo aqui...</p>
-      </div>
-    </div>
-  </div>
-</div>
-
+ </div>
 
 </body>
 </html>

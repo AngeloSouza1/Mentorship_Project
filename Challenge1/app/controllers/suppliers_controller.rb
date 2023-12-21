@@ -128,12 +128,7 @@ class SuppliersController < ApplicationController
             end
             pdf.move_down 8
           end
-          
-  
-  
-  
-  
-  
+            
         send_data pdf.render, filename: 'relatorio_fornecedor.pdf', type: 'application/pdf', disposition: 'inline'
       end
     end
@@ -174,7 +169,7 @@ class SuppliersController < ApplicationController
   end
 
   def destroy
-    @suppliers.destroy!
+    @supplier.destroy!
 
     respond_to do |format|
       format.html { redirect_to suppliers_url, notice: "Fornecedor excluído com sucesso." }

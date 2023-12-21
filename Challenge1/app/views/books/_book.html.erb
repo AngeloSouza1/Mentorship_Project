@@ -27,7 +27,7 @@
               </tr>
               <tr>
                 <th class="text-left">Publicado</th>
-                <td class="text-left"><%= book.publishing %></td>
+                <td class="text-left"><%= book.publishing.strftime("%d/%m/%Y %H:%M:%S") %></td>
               </tr>
             </tbody>
           </table>

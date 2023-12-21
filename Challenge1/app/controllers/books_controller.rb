@@ -146,25 +146,7 @@ if @book.present?
     cells.size = 10
    end
 end
-
-
-
-
-
-
-
-
-
-
-
-       
-       
-       
-       
-       
-       
-       
-        else
+       else
          
           pdf.text "Nenhum livro encontrado para este autor.", size: 10
         end
