@@ -12,6 +12,9 @@ No contexto deste desafio, abordamos a integração de Bancos de Dados e seus Re
 - System Linux:  Linux Mint 21.2
 - DataBase : SQLITE
 
+#### Funcionalidades!
+[Assista ao vídeo de demonstração 1](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192610&Signature=8a8b9ae748d68909687d85b73eade345655cbd24)
+
 ### 1. Batalha  - *DATABASE*   
  #### 1.1 - Implementação dos Bancos de Dados
 - BD Fornecimento
@@ -79,7 +82,7 @@ O relacionamento entre as tabelas assemblies e parts através da tabela associat
 </p>
 
 #### 1.2 - Implementação dos C.R.U.D.S <br>
-- Crud para Cadastrar Autores -[ Assista ao vídeo de demonstração](https://vimeo.com/888319890/2e6803702c)
+- Crud para Cadastrar Autores -[ Assista ao vídeo de demonstração](https://vimeo.com/897010192/80cde76f52)
 - Crud para Cadastrar Livros vinculando com Autor-[ Assista ao vídeo de demonstração](https://vimeo.com/888323765/a4f32ee0c9) 
 - Crud para Cadastrar Fornecedores com uma Conta-[ Assista ao vídeo de demonstração](https://vimeo.com/888319472/72ea688605)
 - Crud para Cadastrar Peças vinculando com Fornecedor-[ Assista ao vídeo de demonstração](https://vimeo.com/888319213/3d1aa00baf)
