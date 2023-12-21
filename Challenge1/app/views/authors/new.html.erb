@@ -1,6 +1,15 @@
-<div class="d-flex justify-content-center align-items-center vh-10">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="padding-top: 5px; padding-bottom: 5px;">
+  <div class="container">
+    <span class="navbar-brand" style="font-size: 2em; font-weight: bold; margin-right: 20px;">Novo Autor</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+
+<div class="d-flex justify-content-center align-items-center vh-100" style="margin-top: 10px;">
   <div class="text-center">
-    <h1>Novo Autor</h1>
 
     <%= render "form", author: @author %>
 

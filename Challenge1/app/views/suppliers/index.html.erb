@@ -1,11 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="padding-top: 5px; padding-bottom: 5px;">
+  <div class="container">
+    <span class="navbar-brand" style="font-size: 2em; font-weight: bold; margin-right: 20px;">Fornecedores</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item <%= 'active' if current_page?(root_path) %>">
+          <%= link_to 'Página Inicial', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(new_supplier_path) %>">
+          <%= link_to 'Novo Fornecedor', new_supplier_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(filtrar_fornecedores_path) %>">
+          <%= link_to 'Filtrar Fornecedores', filtrar_fornecedores_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item <%= 'active' if current_page?( filtrar_fornec_autor_path) %>">
+          <%= link_to 'Filtrar Fornecedores por Autor', filtrar_fornec_autor_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item <%= 'active' if current_page?( relatorio_fornecedor_path) %>">
+          <%= link_to 'Relatório Fornecedores', relatorio_fornecedor_path, class: 'nav-link' %>
+          </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+
+
 <div class="text-center mt-3">
   <p class="alert "><%= notice %></p>
-  <h1>Fornecedores</h1>
-  <%= link_to "Novo Fornecedor", new_supplier_path, class: "btn btn-success mt-3" %>
-  <%= link_to "Filtrar Fornecedores", filtrar_fornecedores_path, class: "btn btn-primary mt-3" %>
-  <%= link_to "Filtrar Fornecedores por Autor", filtrar_fornec_autor_path, class: "btn btn-primary mt-3" %>
-  <%= link_to "Relatório Fornecedores",relatorio_fornecedor_path, class: "btn btn-primary mt-3" %>
-  
+
   <div id="suppliers" class="mx-auto">
     <% @suppliers.each do |supplier| %>
       <br>

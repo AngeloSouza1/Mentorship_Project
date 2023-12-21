@@ -1,5 +1,14 @@
-<div class="container mt-4">
-  <h1 class="text-center">Filtrar Fornecedores por Autor</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="padding-top: 5px; padding-bottom: 5px;">
+  <div class="container">
+    <span class="navbar-brand" style="font-size: 2em; font-weight: bold; margin-right: 20px;">Filtrar Fornecedores por Autor</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+
+<div class="container" style="margin-top: 90px;">
   <%= form_tag(filtrar_fornec_autor_path, method: "get", class: "text-center") do %>
     <div class="form-group row justify-content-center">
       <%= label_tag :search_name, "Nome do Autor:", class: "col-md-2 col-form-label" %>
@@ -23,24 +32,24 @@
         <table class="table table-sm mt-4">
           <thead>
             <tr>
+              <th scope="col">Autor Relacionado</th> 
               <th scope="col">ID</th>  
               <th scope="col">Fornecedor</th>  
               <th scope="col">CNPJ</th>  
-              <th scope="col">Autor Relacionado</th> 
             </tr>
           </thead>
           <tbody>
             <% @suppliers.each_with_index do |supplier, index| %>
               <tr class="<%= index.even? ? 'table-light' : 'table-white' %>">
-                <td><%= supplier.id %></td> 
-                <td><%= supplier.name %></td> 
-                <td><%= supplier.cnpj %></td> 
-                <td>
+               <td>
                 <% supplier.authors.each do |author| %>
                 <li><%= author.name %></li>
                  <% end %>      
                 </td> 
-            <% end %>
+                <td><%= supplier.id %></td> 
+                <td><%= supplier.name %></td> 
+                <td><%= supplier.cnpj %></td> 
+             <% end %>
           </tbody>
         </table>
       <% else %>

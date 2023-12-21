@@ -12,6 +12,9 @@
   <% end %>
 
   <div class="form-group col-md-4 mx-auto text-center">
+    <br>
+    <br>
+    <br>
     <%= form.label :assembly_id, "Montagem", class: "d-block" %>
     <%= form.collection_select :assembly_id, Assembly.all, :id, :name, { prompt: "Selecione uma montagem" }, class: "form-control form-control-sm text-center" %>
     </div>

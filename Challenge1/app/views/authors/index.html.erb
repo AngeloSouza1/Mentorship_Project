@@ -1,11 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="padding-top: 5px; padding-bottom: 5px;">
+  <div class="container">
+    <span class="navbar-brand" style="font-size: 2em; font-weight: bold; margin-right: 20px;">Autores</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item <%= 'active' if current_page?(root_path) %>">
+          <%= link_to 'Página Inicial', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(new_author_path) %>">
+          <%= link_to 'Novo Autor', new_author_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(filtrar_livros_path) %>">
+          <%= link_to 'Filtrar Livros por Nome', filtrar_autor_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(relatorio_autor_path) %>">
+          <%= link_to 'Relatório Livro', relatorio_autor_path, class: 'nav-link' %>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div class="text-center mt-3">
   <p class="alert "><%= notice %></p>
-  <h1>Autores</h1>
-  <%= link_to "Novo Autor", new_author_path, class: "btn btn-success mt-3" %>
-  <%= link_to "Filtrar Livros", filtrar_autor_path, class: "btn btn-primary mt-3" %>
-  <%= link_to "Relatório Autores",relatorio_autor_path, class: "btn btn-primary mt-3" %>
-  <div id="authors" class="mx-auto">
-    <% @authors.each do |author| %>
+     <% @authors.each do |author| %>
       <br>
       <%= render author %>
       <p>
