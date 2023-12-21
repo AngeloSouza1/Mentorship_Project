@@ -1,15 +1,38 @@
-<div class="text-center mt-3">
-  <p class="alert "><%= notice %></p>
-  <h1>Livros</h1>
-  <%= link_to "Novo Livro",new_book_path, class: "btn btn-success mt-3" %>
-  <%= link_to "Filtrar Livros", filtrar_livros_path, class: "btn btn-primary mt-3" %>
-  <%= link_to "Relatório Livros", relatorio_livro_path, class: "btn btn-primary mt-3" %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="padding-top: 5px; padding-bottom: 5px;">
+  <div class="container">
+    <span class="navbar-brand" style="font-size: 2em; font-weight: bold; margin-right: 20px;">Livros</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item <%= 'active' if current_page?(root_path) %>">
+          <%= link_to 'Página Inicial', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(new_book_path) %>">
+          <%= link_to 'Novo Livro', new_book_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(filtrar_livros_path) %>">
+          <%= link_to 'Filtrar Livros', filtrar_livros_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(relatorio_livro_path) %>">
+          <%= link_to 'Relatório Livro', relatorio_livro_path, class: 'nav-link' %>
+        </li>
+       </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-3 text-center">
+  <p class="alert"><%= notice %></p>
+
   <div id="books" class="mx-auto">
     <% @books.each do |book| %>
       <br>
       <%= render book %>
       <p>
-        <%= link_to "Mostrar este livro", book, class: "btn btn-info btn-sm" %>
+        <%= link_to 'Mostrar este livro', book, class: 'btn btn-info btn-sm' %>
       </p>
     <% end %>
   </div>
