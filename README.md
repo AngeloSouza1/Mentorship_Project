@@ -1,5 +1,3 @@
-http://angelosouza1.github.io
-
 ## Mentorship_Project
 ### *Challenge 1 - Preparation*
 ##### Mentoria Desenvolvendome 
