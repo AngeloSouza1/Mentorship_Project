@@ -109,6 +109,7 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 #### 3.1 - Inserções dos campos solicitados<br>
 - Campo CNPJ na tabela Suppliers
 - Campo Digito_Verificador na tabela Account
+  - Solução : <script src="https://gist.github.com/AngeloSouza1/6b763cc26a67de18fbcc7943e2b514e3.js"></script>
 - Campo ISBN na tabela Books
 - Campo CPF na tabela Authors
 - Cálculo Digito_Verificador em Account
