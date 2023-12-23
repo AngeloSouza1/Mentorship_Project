@@ -1,62 +1,49 @@
-# syntax = docker/dockerfile:1
-
-# Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
+# Estágio 1: Construir a aplicação
 ARG RUBY_VERSION=3.0.2
-FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as base
+FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as builder
 
-# Rails app lives here
 WORKDIR /rails
 
-# Set production environment
-ENV RAILS_ENV="production" \
-    BUNDLE_DEPLOYMENT="1" \
-    BUNDLE_PATH="/usr/local/bundle" \
-    BUNDLE_WITHOUT="development"
-
-
-# Throw-away build stage to reduce size of final image
-FROM base as build
-
-# Install packages needed to build gems
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libvips pkg-config
-
-# Install application gems
+# Copiar os arquivos Gemfile e Gemfile.lock para o contêiner
 COPY Gemfile Gemfile.lock ./
-RUN bundle install && \
-    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
+
+# Instalar as dependências necessárias para compilar o 'pg'
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y build-essential git libvips pkg-config libpq-dev && \
+    bundle config set --global frozen false && \
+    bundle install --jobs "$(nproc)" && \
     bundle exec bootsnap precompile --gemfile
 
-# Copy application code
+# Copiar o restante do código da aplicação
 COPY . .
 
-# Precompile bootsnap code for faster boot times
-RUN bundle exec bootsnap precompile app/ lib/
+# Pré-compilar ativos e preparar a aplicação para o estágio final
+RUN bundle exec bootsnap precompile app/ lib/ && \
+    SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
-# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+# Estágio 2: Criar a imagem final
+FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim
 
+WORKDIR /rails
 
-# Final stage for app image
-FROM base
-
-# Install packages needed for deployment
+# Instalar dependências necessárias para implantação
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl libsqlite3-0 libvips && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+    apt-get install --no-install-recommends -y build-essential git libvips pkg-config libpq-dev
 
-# Copy built artifacts: gems, application
-COPY --from=build /usr/local/bundle /usr/local/bundle
-COPY --from=build /rails /rails
+# Copiar os artefatos construídos do estágio anterior
+COPY --from=builder /usr/local/bundle /usr/local/bundle
+COPY --from=builder /rails /rails
 
-# Run and own only the runtime files as a non-root user for security
+# Configurar e executar a aplicação como um usuário não-root por motivos de segurança
 RUN useradd rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
+
 USER rails:rails
 
-# Entrypoint prepares the database.
+# Ponto de entrada que prepara o banco de dados
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
-# Start the server by default, this can be overwritten at runtime
+# Expor a porta 3000 e iniciar o servidor por padrão
 EXPOSE 3000
 CMD ["./bin/rails", "server"]
+
