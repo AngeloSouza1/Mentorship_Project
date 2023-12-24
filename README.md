@@ -181,13 +181,33 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
      <a href="https://gist.github.com/AngeloSouza1/be9fc148f8d6bf1417217274184a907a">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
-- Campo Nome na tabela Parts
+
 #### 4.2 - Inserções de filtros solicitados<br>
 - Fornecedor por nome
+     <p> 
+     <a href="https://gist.github.com/AngeloSouza1/146aaa58552f33984733bfdd623c7a6c">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+     
 - Fornecedor por número de conta em Conta
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/9ce24735142c81c698883d478181e4ac">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+
 - Livros por título
-- Livros por nome em Autor 
-- Montatem por nome em Peça
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/ccb8e3e51c7124c7f14859bebbd09b9d">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+
+- Livros por nome em Autor
+  <p> 
+     <a href="https://gist.github.com/AngeloSouza1/985e89affe5b4b72b9c213b96c6b344d">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+
+- Montagem por nome em Peça
 - Fornecedor por nome do Autor 
 
 ### 5. Batalha  - *RELATÓRIOS*
