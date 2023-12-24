@@ -140,14 +140,13 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 ### 3. Batalha  - *REGRAS*   
 #### 3.1 - Inserções dos campos solicitados<br>
 - Campo CNPJ na tabela Suppliers
-   <p> 
-     <a href="https://gist.github.com/AngeloSouza1/6b763cc26a67de18fbcc7943e2b514e3">
-      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
-     </a>
-
-- Campo Digito_Verificador na tabela Account
     <p> 
      <a href="https://gist.github.com/AngeloSouza1/7fed34d2b82e84e113e258cdf9bc8eea">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+- Campo Digito_Verificador na tabela Account
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/6b763cc26a67de18fbcc7943e2b514e3">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
 
