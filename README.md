@@ -13,7 +13,7 @@ No contexto deste desafio, abordamos a integração de Bancos de Dados e seus Re
 - DataBase : SQLITE
 
 #### Funcionalidades!
-- https://challenge1.fly.dev
+
 <a href="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192610&Signature=8a8b9ae748d68909687d85b73eade345655cbd24">
   <img src="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192610&Signature=8a8b9ae748d68909687d85b73eade345655cbd24" width="300">
 </a>
@@ -29,7 +29,12 @@ No contexto deste desafio, abordamos a integração de Bancos de Dados e seus Re
 <a href="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/47904b9f-64e5-49a9-b29e-594437e48204.gif?ClientID=vimeo-core-prod&Date=1703198042&Signature=fb75f3a8ea818cf19020198ee7c193c298e9d135">
   <img src="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/47904b9f-64e5-49a9-b29e-594437e48204.gif?ClientID=vimeo-core-prod&Date=1703198042&Signature=fb75f3a8ea818cf19020198ee7c193c298e9d135" width="300">
 </a>
-  
+<br>
+<br>
+ <a href="https://challenge1.fly.dev">
+    <img src="https://img.shields.io/badge/ACESSO%20SITE-darkgreen" alt="Site">
+ </a>
+ 
 ### 1. Batalha  - *DATABASE*   
  #### 1.1 - Implementação dos Bancos de Dados
 - BD Fornecimento
