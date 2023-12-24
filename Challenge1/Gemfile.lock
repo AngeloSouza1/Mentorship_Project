@@ -99,6 +99,8 @@ GEM
     debug (1.9.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    dockerfile-rails (1.6.1)
+      rails (>= 3.0.0)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
@@ -147,6 +149,7 @@ GEM
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     pdf-core (0.9.0)
+    pg (1.5.4)
     prawn (2.4.0)
       pdf-core (~> 0.9.0)
       ttfunk (~> 1.7)
@@ -250,11 +253,13 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dockerfile-rails (>= 1.6)
   importmap-rails
   jbuilder
   json (~> 2.5, >= 2.5.1)
   json_pure (~> 2.5)
   maskedinput-rails
+  pg (~> 1.5)
   prawn
   prawn-table
   puma (>= 5.0)

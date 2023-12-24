@@ -52,3 +52,5 @@ montadora_production:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   database: montadora_production.sqlite3
+
+  
