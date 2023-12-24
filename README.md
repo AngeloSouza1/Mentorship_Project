@@ -14,11 +14,21 @@ No contexto deste desafio, abordamos a integração de Bancos de Dados e seus Re
 
 #### Funcionalidades!
 - https://challenge1.fly.dev
+<a href="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192610&Signature=8a8b9ae748d68909687d85b73eade345655cbd24">
+  <img src="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192610&Signature=8a8b9ae748d68909687d85b73eade345655cbd24" width="300">
+</a>
 
-- [Assista ao vídeo de demonstração 1](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/67a3e007-6aab-4153-8452-52902c2d5b72.gif?ClientID=vimeo-core-prod&Date=1703192610&Signature=8a8b9ae748d68909687d85b73eade345655cbd24)
-- [Assista ao vídeo de demonstração 2](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/004c3faf-a348-422f-a5ce-9fed5f4f3893.gif?ClientID=vimeo-core-prod&Date=1703193109&Signature=8e19b4a40bcb32e854cf6045794d50d8f4249df4)
-- [Assista ao vídeo de demonstração 3](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/1be41e9a-a605-4eff-8496-d533d4f322b9.gif?ClientID=vimeo-core-prod&Date=1703197689&Signature=2c63e0b68eefc89d1ed431955498050aaea9fe24)
-- [Assista ao vídeo de demonstração 4](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/47904b9f-64e5-49a9-b29e-594437e48204.gif?ClientID=vimeo-core-prod&Date=1703198042&Signature=fb75f3a8ea818cf19020198ee7c193c298e9d135)
+<a href="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/004c3faf-a348-422f-a5ce-9fed5f4f3893.gif?ClientID=vimeo-core-prod&Date=1703193109&Signature=8e19b4a40bcb32e854cf6045794d50d8f4249df4">
+  <img src="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/004c3faf-a348-422f-a5ce-9fed5f4f3893.gif?ClientID=vimeo-core-prod&Date=1703193109&Signature=8e19b4a40bcb32e854cf6045794d50d8f4249df4" width="300">
+</a>
+
+<a href="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/1be41e9a-a605-4eff-8496-d533d4f322b9.gif?ClientID=vimeo-core-prod&Date=1703197689&Signature=2c63e0b68eefc89d1ed431955498050aaea9fe24">
+  <img src="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/1be41e9a-a605-4eff-8496-d533d4f322b9.gif?ClientID=vimeo-core-prod&Date=1703197689&Signature=2c63e0b68eefc89d1ed431955498050aaea9fe24" width="300">
+</a>
+
+<a href="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/47904b9f-64e5-49a9-b29e-594437e48204.gif?ClientID=vimeo-core-prod&Date=1703198042&Signature=fb75f3a8ea818cf19020198ee7c193c298e9d135">
+  <img src="https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/47904b9f-64e5-49a9-b29e-594437e48204.gif?ClientID=vimeo-core-prod&Date=1703198042&Signature=fb75f3a8ea818cf19020198ee7c193c298e9d135" width="300">
+</a>
   
 ### 1. Batalha  - *DATABASE*   
  #### 1.1 - Implementação dos Bancos de Dados
