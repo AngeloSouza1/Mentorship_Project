@@ -157,12 +157,22 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
      </a>
    
 - Campo CPF na tabela Authors
+  <p> 
+     <a href="https://gist.github.com/AngeloSouza1/17bc6cff8e8c3a6dce48ae3967a702ea">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+
+   
 - Cálculo Digito_Verificador em Account
     <p> 
      <a href="https://gist.github.com/AngeloSouza1/6b763cc26a67de18fbcc7943e2b514e3">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
 - Validação dos campos : CNPJ na tabela Suppliers, ISBN na tabela Books e CPF na tabela Authors
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/6acfe35221fc0294ac7d53d0f998ba9c">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
 
 ### 4. Batalha  - *FILTROS*
 #### 4.1 - Inserções de campos solicitados<br>
