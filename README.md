@@ -102,16 +102,29 @@ O relacionamento entre as tabelas assemblies e parts através da tabela associat
 </p>
 
 #### 1.2 - Implementação dos C.R.U.D.S 
-- Crud para Cadastrar Autores
-  <p>
-  <a href="https://vimeo.com/897010192/80cde76f52">
-    <img src="https://img.shields.io/badge/Assita ao video de%20Demonstração-darkysilver" alt="Demonstração">
- </a>
-- Crud para Cadastrar Livros vinculando com Autor-[ Assista ao vídeo de demonstração](https://vimeo.com/897025458/5a65e2878e)
-- Crud para Cadastrar Fornecedores com uma Conta-[ Assista ao vídeo de demonstração](https://vimeo.com/897027139/f49b7d2789)
-- Crud para Cadastrar Peças vinculando com Fornecedor-[ Assista ao vídeo de demonstração](https://vimeo.com/897032265/862b03d451)
-- Crud para Cadastrar Montagens com várias Peças e vinculando com Livro-[ Assista ao vídeo de demonstração](https://vimeo.com/897032999/5eb055b83d)
-  
+
+ - Crud para Cadastrar Autores  <a href="https://vimeo.com/897010192/80cde76f52">
+    <img src="https://img.shields.io/badge/Assista ao video de%20Demonstração-darkgreen" alt="Demonstração">
+  </a>
+ 
+ - Crud para Cadastrar Livros vinculando com Autor
+   <a href="https://vimeo.com/897025458/5a65e2878e">
+    <img src="https://img.shields.io/badge/Assista ao video de%20Demonstração-darkgreen" alt="Demonstração">
+  </a>
+ 
+ - Crud para Cadastrar Fornecedores com uma Conta  <a href="https://vimeo.com/897027139/f49b7d2789">
+    <img src="https://img.shields.io/badge/Assista ao video de%20Demonstração-darkgreen" alt="Demonstração">
+  </a>
+
+ - Crud para Cadastrar Peças vinculando com Fornecedor
+   <a href="https://vimeo.com/897032265/862b03d451">
+    <img src="https://img.shields.io/badge/Assista ao video de%20Demonstração-darkgreen" alt="Demonstração">
+  </a>
+ 
+ - Crud para Cadastrar Montagens com várias Peças e vinculando com Livro
+   <a href="https://vimeo.com/897032999/5eb055b83d">
+    <img src="https://img.shields.io/badge/Assista ao video de%20Demonstração-darkgreen" alt="Demonstração">
+  </a>
 
 ### 2. Batalha  - *APIS*   
 #### 2.1 - Implementação dos C.R.U.D.S <br>
@@ -130,7 +143,7 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 - Campo Digito_Verificador na tabela Account
     <p> 
      <a href="https://gist.github.com/AngeloSouza1/6b763cc26a67de18fbcc7943e2b514e3">
-      <img src="https://img.shields.io/badge/Ver%20Solução-DarkBlue" alt="Ver Solução">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
 
 - Campo ISBN na tabela Books
