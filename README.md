@@ -161,13 +161,13 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
      <a href="https://gist.github.com/AngeloSouza1/17bc6cff8e8c3a6dce48ae3967a702ea">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
-
-   
+  
 - Cálculo Digito_Verificador em Account
     <p> 
      <a href="https://gist.github.com/AngeloSouza1/6b763cc26a67de18fbcc7943e2b514e3">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
+     
 - Validação dos campos : CNPJ na tabela Suppliers, ISBN na tabela Books e CPF na tabela Authors
    <p> 
      <a href="https://gist.github.com/AngeloSouza1/6acfe35221fc0294ac7d53d0f998ba9c">
@@ -208,7 +208,16 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
      </a>
 
 - Montagem por nome em Peça
-- Fornecedor por nome do Autor 
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/af72881bedfecd21724a81f2ea90ee93">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+
+- Fornecedor por nome do Autor
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/b5926d29a8227cdcedbb38b6e6a2fe2d">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
 
 ### 5. Batalha  - *RELATÓRIOS*
 - Adição do Campo valor em Peça
@@ -216,8 +225,15 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
      <a href="https://gist.github.com/AngeloSouza1/5aff385b055b8a3febd03621d2a21130">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
+     
 - Autor(com todas as informações) com seus Livros(com todas as informações) e o total de livros publicados
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/10f1598b8b0eddc1bed09a10a0d26f58">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+     
 - Forneceor(com todas as informações) com todos os autores(com todas as informações) e livros(com todas as informações)
+  
 - Livros com a montagem(com todas as informações) com suas peças (com todas as informações), o total de peças e o custo total da montagem.
 
 
