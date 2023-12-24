@@ -110,9 +110,10 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 - Campo CNPJ na tabela Suppliers
 - Campo Digito_Verificador na tabela Account
     <p> 
-    <a href="https://gist.github.com/AngeloSouza1/6b763cc26a67de18fbcc7943e2b514e3">
-    <img src="https://img.shields.io/badge/Solução-blue" alt="Ver Solução">
-    </a>
+<a href="https://gist.github.com/AngeloSouza1/6b763cc26a67de18fbcc7943e2b514e3" style="background-color: #1E2A38; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">
+  Ver Solução
+</a>
+
 - Campo ISBN na tabela Books
 - Campo CPF na tabela Authors
 - Cálculo Digito_Verificador em Account
