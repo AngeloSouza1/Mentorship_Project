@@ -177,6 +177,10 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 ### 4. Batalha  - *FILTROS*
 #### 4.1 - Inserções de campos solicitados<br>
 - Campo Título na tabela Books
+     <p> 
+     <a href="https://gist.github.com/AngeloSouza1/be9fc148f8d6bf1417217274184a907a">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
 - Campo Nome na tabela Parts
 #### 4.2 - Inserções de filtros solicitados<br>
 - Fornecedor por nome
@@ -188,6 +192,10 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 
 ### 5. Batalha  - *RELATÓRIOS*
 - Adição do Campo valor em Peça
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/5aff385b055b8a3febd03621d2a21130">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
 - Autor(com todas as informações) com seus Livros(com todas as informações) e o total de livros publicados
 - Forneceor(com todas as informações) com todos os autores(com todas as informações) e livros(com todas as informações)
 - Livros com a montagem(com todas as informações) com suas peças (com todas as informações), o total de peças e o custo total da montagem.
