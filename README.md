@@ -232,10 +232,18 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
      
-- Forneceor(com todas as informações) com todos os autores(com todas as informações) e livros(com todas as informações)
-  
-- Livros com a montagem(com todas as informações) com suas peças (com todas as informações), o total de peças e o custo total da montagem.
-
+- Fornecedor(com todas as informações) com todos os autores(com todas as informações) e livros(com todas as informações)
+     <p> 
+     <a href="https://gist.github.com/AngeloSouza1/1ce6f9d489236acf5ed3cf7ca90dfd88">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+   
+- Livros com a montagem(com todas as informações) com suas peças (com todas as informações), o total de peças e o custo total da montagem
+   <p> 
+     <a href="https://gist.github.com/AngeloSouza1/80f542b53d9f25963feca82486bd7384">
+      <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
+     </a>
+   
 
 
 
