@@ -185,7 +185,7 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 #### 4.2 - Inserções de filtros solicitados<br>
 - Fornecedor por nome
      <p> 
-    <a href="https://github.com/AngeloSouza1/Mentorship_Project/Issues/23">
+    <a href="https://github.com/AngeloSouza1/Mentorship_Project/Issues/#23">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
      
