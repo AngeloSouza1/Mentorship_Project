@@ -228,7 +228,7 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
      
 - Autor(com todas as informações) com seus Livros(com todas as informações) e o total de livros publicados
    <p> 
-     <a href="https://gist.github.com/AngeloSouza1/10f1598b8b0eddc1bed09a10a0d26f58">
+      <a href="https://github.com/AngeloSouza1/Mentorship_Project/issues/39">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
      
