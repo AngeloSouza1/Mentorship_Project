@@ -240,7 +240,7 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
    
 - Livros com a montagem(com todas as informações) com suas peças (com todas as informações), o total de peças e o custo total da montagem
    <p> 
-     <a href="https://gist.github.com/AngeloSouza1/80f542b53d9f25963feca82486bd7384">
+         <a href="https://github.com/AngeloSouza1/Mentorship_Project/issues/41">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
    
