@@ -197,25 +197,25 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 
 - Livros por título
    <p> 
-     <a href="https://gist.github.com/AngeloSouza1/ccb8e3e51c7124c7f14859bebbd09b9d">
+    <a href="https://github.com/AngeloSouza1/Mentorship_Project/issues/26">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
 
 - Livros por nome em Autor
   <p> 
-     <a href="https://gist.github.com/AngeloSouza1/985e89affe5b4b72b9c213b96c6b344d">
+    <a href="https://github.com/AngeloSouza1/Mentorship_Project/issues/27">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
 
 - Montagem por nome em Peça
    <p> 
-     <a href="https://gist.github.com/AngeloSouza1/af72881bedfecd21724a81f2ea90ee93">
+     <a href="https://github.com/AngeloSouza1/Mentorship_Project/issues/28">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
 
 - Fornecedor por nome do Autor
    <p> 
-     <a href="https://gist.github.com/AngeloSouza1/b5926d29a8227cdcedbb38b6e6a2fe2d">
+     <a href="https://github.com/AngeloSouza1/Mentorship_Project/issues/29">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
 
