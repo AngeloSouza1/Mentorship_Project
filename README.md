@@ -234,7 +234,7 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
      
 - Fornecedor(com todas as informações) com todos os autores(com todas as informações) e livros(com todas as informações)
      <p> 
-     <a href="https://gist.github.com/AngeloSouza1/1ce6f9d489236acf5ed3cf7ca90dfd88">
+     <a href="https://github.com/AngeloSouza1/Mentorship_Project/issues/40">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
    
