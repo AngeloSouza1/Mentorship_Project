@@ -185,13 +185,13 @@ https://github.com/AngeloSouza1/Mentorship_Project/assets/104176076/41579def-bee
 #### 4.2 - Inserções de filtros solicitados<br>
 - Fornecedor por nome
      <p> 
-     <a href="https://gist.github.com/AngeloSouza1/146aaa58552f33984733bfdd623c7a6c">
+    <a href="https://github.com/AngeloSouza1/issues/23">
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
      
 - Fornecedor por número de conta em Conta
    <p> 
-     <a href="https://github.com/AngeloSouza1/issues/23">
+    <a href="https://gist.github.com/AngeloSouza1/9ce24735142c81c698883d478181e4ac">    
       <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
      </a>
 
